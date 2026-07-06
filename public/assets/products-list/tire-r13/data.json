@@ -1,0 +1,59 @@
+{
+  "tire-r13": [
+    {
+      "id": "tire-r13-1",
+      "src": "r13-1.jpg",
+      "title": "لاستیک پراید کویر تایر مدل KB۱۴ سایز ۱۷۵/۷۰R۱۳ (۲۰۲۵)",
+      "price": "۴,۷۸۰,۰۰۰",
+      "car": "پراید",
+      "brand": "کویرتایر",
+      "discount": 5,
+      "instock": true,
+      "category": "tire-r13"
+    },
+    {
+      "id": "tire-r13-2",
+      "src": "r13-2.jpg",
+      "title": "لاستیک تیبا کویر تایر مدل KB۱۴ سایز ۱۷۵/۷۰R۱۳ (۲۰۲۵)",
+      "price": "۴,۷۸۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": false,
+      "category": "tire-r13"
+    },
+    {
+      "id": "tire-r13-3",
+      "src": "r13-3.jpg",
+      "title": "لاستیک ساینا کویر تایر مدل KB۳۶ سایز ۱۷۵/۷۰R۱۳ (۲۰۲۵)",
+      "price": "۴,۷۸۰,۰۰۰",
+      "car": "ساینا",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r13"
+    },
+    {
+      "id": "tire-r13-4",
+      "src": "r13-4.jpg",
+      "title": "لاستیک پراید کویر تایر مدل KB۲۰۰۰ سایز ۱۷۵/۶۰R۱۳ (۲۰۲۵)",
+      "price": "۴,۷۸۰,۰۰۰",
+      "car": "پراید",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": false,
+      "category": "tire-r13"
+    },
+    {
+      "id": "tire-r13-5",
+      "src": "r13-5.jpg",
+      "title": "لاستیک پراید کویر تایر مدل KB۲۰۰۰ سایز ۱۷۵/۶۰R۱۳ (۲۰۲۵)",
+      "price": "۴,۷۸۰,۰۰۰",
+      "car": "پراید",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r13"
+    }
+  ]
+}

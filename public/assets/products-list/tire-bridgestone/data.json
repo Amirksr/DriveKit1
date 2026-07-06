@@ -1,0 +1,15 @@
+{
+  "tire-bridgestone": [
+    {
+      "id": "tire-bridgestone-1",
+      "src": "bridgestone-1.jpg",
+      "title": "لاستیک کامیونت برند بریجستون ژاپن (۲ حلقه)",
+      "price": "۳۵,۰۰۰,۰۰۰",
+      "car": "کامیونت",
+      "brand": "بریجستون",
+      "discount": 5,
+      "instock": true,
+      "category": "tire-bridgestone"
+    }
+  ]
+}

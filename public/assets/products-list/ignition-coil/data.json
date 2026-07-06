@@ -1,0 +1,136 @@
+{
+  "ignition-coil": [
+    {
+      "id": "ignition-coil-1",
+      "src": "coil-1.jpg",
+      "title": "کویل طرح بوش ساینا برند LZNF",
+      "price": "۱,۰۴۰,۰۰۰",
+      "car": "ساینا",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-2",
+      "src": "coil-2.jpg",
+      "title": "کویل دوبل طرح ولئو ساژم پژو ۴۰۵ برند LZNF",
+      "price": "۱,۲۷۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-3",
+      "src": "coil-3.jpg",
+      "title": "کویل دنا EF۷ برند LZNF",
+      "price": "۸۷۰,۰۰۰",
+      "car": "دنا EF7",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-4",
+      "src": "coil-4.jpg",
+      "title": "کویل طرح بوش تیبا برند LZNF",
+      "price": "۱,۰۴۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-5",
+      "src": "coil-5.jpg",
+      "title": "کویل پژو ۲۰۶ تیپ ۵ برند LZNF",
+      "price": "۲,۹۲۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": false,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-6",
+      "src": "coil-6.jpg",
+      "title": "کویل دو سوکتی پراید یورو ۴ برند LZNF",
+      "price": "۱,۲۷۰,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": false,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-7",
+      "src": "coil-7.jpg",
+      "title": "کویل L۹۰ برند LZNF",
+      "price": "۹۵۲,۰۰۰",
+      "car": "L 90",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-8",
+      "src": "coil-8.jpg",
+      "title": "کویل طرح بوش نیسان برند LZNF",
+      "price": "۱,۳۲۵,۰۰۰",
+      "car": "نیسان",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-9",
+      "src": "coil-9.jpg",
+      "title": "کویل دوقلو طرح زیمنس سمند برند LZNF",
+      "price": "۱,۳۲۰,۰۰۰",
+      "car": "سمند",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-10",
+      "src": "coil-10.jpg",
+      "title": "کویل دوقلو طرح زیمنس پژو پارس برند LZNF",
+      "price": "۱,۳۲۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-11",
+      "src": "coil-11.jpg",
+      "title": "کویل پژو ۲۰۷ برند LZNF",
+      "price": "۳,۴۰۰,۰۰۰",
+      "car": "پژو 207",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    },
+    {
+      "id": "ignition-coil-12",
+      "src": "coil-12.jpg",
+      "title": "کویل طرح بوش کوییک برند LZNF",
+      "price": "۱,۰۴۰,۰۰۰",
+      "car": "کوئیک",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "ignition-coil"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "tire-r17": [
+    {
+      "id": "tire-r17-1",
+      "src": "r17-1.jpg",
+      "title": "لاستیک کیا اپتیما کویر تایر مدل KB۵۷ سایز ۲۱۵/۵۵R۱۷ (۲۰۲۴)",
+      "price": "۹,۰۰۰,۰۰۰",
+      "car": "کیا اپتیما",
+      "brand": "کویرتایر",
+      "discount": 5,
+      "instock": true,
+      "category": "tire-r17"
+    },
+    {
+      "id": "tire-r17-2",
+      "src": "r17-2.jpg",
+      "title": "لاستیک جک S۵ کویر تایر مدل KB۷۰۰ سایز ۲۳۵/۶۵R۱۷ (۲۰۲۴)",
+      "price": "۹,۰۰۰,۰۰۰",
+      "car": "جک S5",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": false,
+      "category": "tire-r17"
+    },
+    {
+      "id": "tire-r17-3",
+      "src": "r17-3.jpg",
+      "title": "لاستیک کیا اپتیما کویر تایر مدل KB۵۷ سایز ۲۱۵/۵۵R۱۷ (۲۰۲۵)",
+      "price": "۹,۷۸۰,۰۰۰",
+      "car": "کیا اپتیما",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r17"
+    },
+    {
+      "id": "tire-r17-4",
+      "src": "r17-4.jpg",
+      "title": "لاستیک جک S۵ کویر تایر مدل KB۷۰۰ سایز ۲۳۵/۶۵R۱۷ (۲۰۲۵)",
+      "price": "۹,۷۸۰,۰۰۰",
+      "car": "جک S5",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r17"
+    },
+    {
+      "id": "tire-r17-5",
+      "src": "r17-5.jpg",
+      "title": "لاستیک چری آریزو6 کویر تایر مدل KB۵۵ سایز ۲۰۵/۵۰R۱۷ (۲۰۲۴)",
+      "price": "۹,۰۰۰,۰۰۰",
+      "car": "چری آریزو ۶",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r17"
+    },
+    {
+      "id": "tire-r17-6",
+      "src": "r17-6.jpg",
+      "title": "لاستیک چری آریزو6 کویر تایر مدل KB۵۵ سایز ۲۰۵/۵۰R۱۷ (۲۰۲۵)",
+      "price": "۹,۷۸۰,۰۰۰",
+      "car": "چری آریزو ۶",
+      "brand": "کویرتایر",
+      "discount": 5,
+      "instock": true,
+      "category": "tire-r17"
+    }
+  ]
+}

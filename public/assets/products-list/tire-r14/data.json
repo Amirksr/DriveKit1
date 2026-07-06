@@ -1,0 +1,48 @@
+{
+  "tire-r14": [
+    {
+      "id": "tire-r14-1",
+      "src": "r14-1.jpg",
+      "title": "لاستیک پژو405 کویر تایر مدل KB۲۲ سایز ۱۸۵/۶۵R۱۴ (۲۰۲۵)",
+      "price": "۴,۸۷۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r14"
+    },
+    {
+      "id": "tire-r14-2",
+      "src": "r14-2.jpg",
+      "title": "لاستیک ساینا کویر تایر مدل KB۸۸ سایز ۱۸۵/۶۰R۱۴ (۲۰۲۴)",
+      "price": "۴,۸۷۰,۰۰۰",
+      "car": "ساینا",
+      "brand": "کویرتایر",
+      "discount": 5,
+      "instock": true,
+      "category": "tire-r14"
+    },
+    {
+      "id": "tire-r14-3",
+      "src": "r14-3.jpg",
+      "title": "لاستیک پژو206 کویر تایر مدل KB۷۷ سایز ۲۰۵/۶۰R۱۴ (۲۰۲۵)",
+      "price": "۴,۸۷۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r14"
+    },
+    {
+      "id": "tire-r14-4",
+      "src": "r14-4.jpg",
+      "title": "لاستیک پژو207 کویر تایر مدل KB۱۴ سایز ۱۸۵/۶۵R۱۴ (۲۰۲۵)",
+      "price": "۴,۸۷۰,۰۰۰",
+      "car": "پژو 207",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r14"
+    }
+  ]
+}

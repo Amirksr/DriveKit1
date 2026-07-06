@@ -1,0 +1,37 @@
+{
+  "tire-r15": [
+    {
+      "id": "tire-r15-1",
+      "src": "r15-1.jpg",
+      "title": "لاستیک دنا پلاس کویر تایر مدل KB۴۷ سایز ۱۹۵/۶۵R۱۵ (۲۰۲۵)",
+      "price": "۵,۸۷۰,۰۰۰",
+      "car": "دنا پلاس",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r15"
+    },
+    {
+      "id": "tire-r15-2",
+      "src": "r15-2.jpg",
+      "title": "لاستیک پژو پارس کویر تایر مدل KB۲۲ سایز ۱۸۵/۶۵R۱۵ (۲۰۲۵)",
+      "price": "۵,۸۷۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r15"
+    },
+    {
+      "id": "tire-r15-3",
+      "src": "r15-3.jpg",
+      "title": "لاستیک دنا کویر تایر مدل KB۷۷ سایز ۲۰۵/۶۰R۱۵ (۲۰۲۵)",
+      "price": "۵,۸۷۰,۰۰۰",
+      "car": "دنا EF7",
+      "brand": "کویرتایر",
+      "discount": 5,
+      "instock": false,
+      "category": "tire-r15"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "mashali-plloos": [
+    {
+      "id": "mashali-plloos-1",
+      "src": "plloos-1.jpg",
+      "title": "سه شاخه پلوس ۲۱ خار پژو ۲۰۶ برند RSCO",
+      "price": "۳۶۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-2",
+      "src": "plloos-2.jpg",
+      "title": "سه شاخ پلوس ۳۴ خار پژو ۴۰۵ برند RSCO",
+      "price": "۳۶۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 7,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-3",
+      "src": "plloos-3.jpg",
+      "title": "مشعلی پلوس ۱۹ خار ABS پراید برند RSCO",
+      "price": "۱,۳۰۰,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": false,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-4",
+      "src": "plloos-4.jpg",
+      "title": "مشعلی پلوس کوتاه ۲۲ خار پژو ۴۰۵ برند RSCO",
+      "price": "۱,۸۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-5",
+      "src": "plloos-5.jpg",
+      "title": "مشعلی پلوس کوتاه ۲۴ خار پژو ۴۰۵ برند RSCO",
+      "price": "۱,۶۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-6",
+      "src": "plloos-6.jpg",
+      "title": "سه شاخ پلوس ۲۴ خار پژو ۴۰۵ برند RSCO",
+      "price": "۳۶۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-7",
+      "src": "plloos-7.jpg",
+      "title": "سه شاخ پلوس ۲۲ خار پژو ۴۰۵ برند RSCO",
+      "price": "۳۶۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-8",
+      "src": "plloos-8.jpg",
+      "title": "مشعلی پلوس بلند ۲۴ خار پژو ۴۰۵ برند RSCO",
+      "price": "۲,۳۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "mashali-plloos"
+    },
+    {
+      "id": "mashali-plloos-9",
+      "src": "plloos-9.jpg",
+      "title": "مشعلی پلوس بلند ۲۲ خار پژو ۴۰۵ برند RSCO",
+      "price": "۲,۳۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "mashali-plloos"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "abs-speed-sensor": [
+    {
+      "id": "abs-speed-sensor-1",
+      "src": "abs-1.jpg",
+      "title": "سنسور سرعت چرخ عقب راست پژو پارس برند LZNF",
+      "price": "۴۵۷,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-2",
+      "src": "abs-2.jpg",
+      "title": "سنسور سرعت طرح بوش چرخ جلو پژو پارس برند LZNF",
+      "price": "۴۴۸,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-3",
+      "src": "abs-3.jpg",
+      "title": "سنسور سرعت چرخ جلو پژو ۲۰۶ تیپ ۲ برند LZNF",
+      "price": "۴۸۷,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-4",
+      "src": "abs-4.jpg",
+      "title": "سنسور سرعت چرخ جلو پراید برند LZNF",
+      "price": "۴۵۲,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": false,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-5",
+      "src": "abs-5.jpg",
+      "title": "سنسور سرعت چرخ جلو ساینا برند LZNF",
+      "price": "۴۶۵,۰۰۰",
+      "car": "ساینا",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-6",
+      "src": "abs-6.jpg",
+      "title": "سنسور سرعت چرخ جلو تیبا برند LZNF",
+      "price": "۴۶۵,۰۰۰",
+      "car": "تیبا",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-7",
+      "src": "abs-7.jpg",
+      "title": "سنسور سرعت چرخ جلو کوییک برند LZNF",
+      "price": "۴۶۵,۰۰۰",
+      "car": "کوئیک",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-8",
+      "src": "abs-8.jpg",
+      "title": "سنسور سرعت طرح زیمنس چرخ جلو پژو ۴۰۵ برند LZNF",
+      "price": "۴۵۳,۰۰۰",
+      "car": "پژو 405",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": false,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-9",
+      "src": "abs-9.jpg",
+      "title": "سنسور سرعت چرخ عقب چپ سمند برند LZNF",
+      "price": "۴۵۹,۰۰۰",
+      "car": "سمند",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    },
+    {
+      "id": "abs-speed-sensor-10",
+      "src": "abs-10.jpg",
+      "title": "سنسور سرعت چرخ جلو پژو ۲۰۶ تیپ ۵ برند LZNF",
+      "price": "۴۸۷,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "abs-speed-sensor"
+    }
+  ]
+}

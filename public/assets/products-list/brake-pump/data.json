@@ -1,0 +1,37 @@
+{
+  "brake-pump": [
+    {
+      "id": "brake-pump-1",
+      "src": "brakePump-1.jpg",
+      "title": "پمپ ترمز CBS پراید برند GISP",
+      "price": "۱,۶۲۰,۰۰۰",
+      "car": "پراید",
+      "brand": "جی آی اس پی",
+      "discount": 0,
+      "instock": true,
+      "category": "brake-pump"
+    },
+    {
+      "id": "brake-pump-2",
+      "src": "brakePump-2.jpg",
+      "title": "پمپ ترمز ABS پراید برند GISP",
+      "price": "۱,۷۸۰,۰۰۰",
+      "car": "پراید",
+      "brand": "جی آی اس پی",
+      "discount": 5,
+      "instock": true,
+      "category": "brake-pump"
+    },
+    {
+      "id": "brake-pump-3",
+      "src": "brakePump-3.jpg",
+      "title": "پمپ ترمز ABS تیبا برند GISP",
+      "price": "۱,۸۲۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "جی آی اس پی",
+      "discount": 0,
+      "instock": true,
+      "category": "brake-pump"
+    }
+  ]
+}

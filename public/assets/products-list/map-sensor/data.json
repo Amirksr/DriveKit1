@@ -1,0 +1,114 @@
+{
+  "map-sensor": [
+    {
+      "id": "map-sensor-1",
+      "src": "map-1.jpg",
+      "title": "مپ سنسور طرح بوش پژو ۴۰۵ برند LZNF",
+      "price": "۴۴۵,۰۰۰",
+      "car": "پژو 405",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-2",
+      "src": "map-2.jpg",
+      "title": "مپ سنسور طرح بوش پراید برند LZNF",
+      "price": "۴۳۸,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-3",
+      "src": "map-3.jpg",
+      "title": "سنسور منیفولد (مپ سنسور) ایران خودرو",
+      "price": "۶۲۵,۰۰۰",
+      "car": "سمند",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-4",
+      "src": "map-4.jpg",
+      "title": "مپ سنسور طرح ساژم پژو ۲۰۶ برند LZNF",
+      "price": "۴۲۵,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": false,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-5",
+      "src": "map-5.jpg",
+      "title": "مپ سنسور طرح بوش پژو پارس برند LZNF",
+      "price": "۴۴۵,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "مپپارت فیدارنا",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-6",
+      "src": "map-6.jpg",
+      "title": "مپ سنسور طرح زیمنس تیبا برند LZNF",
+      "price": "۴۱۸,۰۰۰",
+      "car": "تیبا",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-7",
+      "src": "map-7.jpg",
+      "title": "مپ سنسور طرح ساژم رانا برند LZNF",
+      "price": "۴۳۲,۰۰۰",
+      "car": "رانا",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-8",
+      "src": "map-8.jpg",
+      "title": "مپ سنسور خرگوشی طرح ساژم پژو ۴۰۵ برند LZNF",
+      "price": "۴۳۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-9",
+      "src": "map-9.jpg",
+      "title": "مپ سنسور خرگوشی طرح ساژم سمند برند LZNF",
+      "price": "۴۳۰,۰۰۰",
+      "car": "سمند",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "map-sensor"
+    },
+    {
+      "id": "map-sensor-10",
+      "src": "map-10.jpg",
+      "title": "مپ سنسور طرح زیمنس پراید برند LZNF",
+      "price": "۴۱۸,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "map-sensor"
+    }
+  ]
+}

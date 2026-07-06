@@ -1,0 +1,26 @@
+{
+  "axle-parts": [
+    {
+      "id": "axle-parts-1",
+      "src": "axle-1.jpg",
+      "title": "میل ژامبون چپ پژو پارس XU۷ برند رفیع نیا",
+      "price": "۵۵۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "رفیع نیا",
+      "discount": 42,
+      "instock": true,
+      "category": "axle-parts"
+    },
+    {
+      "id": "axle-parts-2",
+      "src": "axle-2.jpg",
+      "title": "میل ژامبون توپر پژو پارس XU۷ برند رفیع نیا",
+      "price": "۵۸۲,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "رفیع نیا",
+      "discount": 5,
+      "instock": true,
+      "category": "axle-parts"
+    }
+  ]
+}

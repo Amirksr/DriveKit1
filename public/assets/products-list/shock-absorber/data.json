@@ -1,0 +1,103 @@
+{
+  "shock-absorber": [
+    {
+      "id": "shock-absorber-1",
+      "src": "absorber-1.jpg",
+      "title": "کمک فنر جلو پژو ۲۰۶ برند ایساکو (چپ و راست)",
+      "price": "۲,۷۶۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "ایساکو",
+      "discount": 5,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-2",
+      "src": "absorber-2.jpg",
+      "title": "کمک فنر جلو رانا برند ایساکو (چپ و راست)",
+      "price": "۲,۷۶۰,۰۰۰",
+      "car": "رانا",
+      "brand": "ایساکو",
+      "discount": 0,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-3",
+      "src": "absorber-3.jpg",
+      "title": "کمک فنر جلو پژو ۲۰۷ برند ایساکو (چپ و راست)",
+      "price": "۲,۷۶۰,۰۰۰",
+      "car": "پژو 207",
+      "brand": "ایساکو",
+      "discount": 0,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-4",
+      "src": "absorber-4.jpg",
+      "title": "کمک فنر جلو راست گازی پراید برند RSCO",
+      "price": "۱,۵۸۴,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-5",
+      "src": "absorber-5.jpg",
+      "title": "کمک فنر جلو چپ گازی پراید برند RSCO",
+      "price": "۱,۵۸۴,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-6",
+      "src": "absorber-6.jpg",
+      "title": "کمک فنر عقب گازی پژو ۲۰۷ برند ایساکو",
+      "price": "۱,۳۴۰,۰۰۰",
+      "car": "پژو 207",
+      "brand": "ایساکو",
+      "discount": 5,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-7",
+      "src": "absorber-7.jpg",
+      "title": "کمک فنر عقب گازی رانا برند ایساکو",
+      "price": "۱,۳۴۰,۰۰۰",
+      "car": "رانا",
+      "brand": "ایساکو",
+      "discount": 0,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-8",
+      "src": "absorber-8.jpg",
+      "title": "کمک فنر گازی عقب پژو ۴۰۵ برند RSCO",
+      "price": "۱,۶۳۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "shock-absorber"
+    },
+    {
+      "id": "shock-absorber-9",
+      "src": "absorber-9.jpg",
+      "title": "کمک فنر عقب گازی پژو ۲۰۶ برند ایساکو",
+      "price": "۱,۳۴۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "ایساکو",
+      "discount": 0,
+      "instock": true,
+      "category": "shock-absorber"
+    }
+  ]
+}

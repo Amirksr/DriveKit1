@@ -1,0 +1,136 @@
+{
+  "oxygen-sensor": [
+    {
+      "id": "oxygen-sensor-1",
+      "src": "lznf1.jpg",
+      "title": "سنسور اکسیژن طول کوتاه طرح زیمنس کوییک برند LZNF",
+      "price": "۱,۲۱۰,۰۰۰",
+      "car": "کوئیک",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-2",
+      "src": "lznf2.jpg",
+      "title": "سنسور اکسیژن طرح ولئو ساژم پژو ۲۰۶ تیپ ۲ برند LZNF",
+      "price": "۱,۲۱۸,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-3",
+      "src": "lznf3.jpg",
+      "title": "سنسور اکسیژن طول بلند طرح زیمنس تیبا برند LZNF",
+      "price": "۱,۲۴۵,۰۰۰",
+      "car": "تیبا",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-4",
+      "src": "lznf4.jpg",
+      "title": "سنسور اکسیژن طرح بوش کابل آبی پژو پارس XU۷ برند LZNF",
+      "price": "۱,۲۲۵,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-5",
+      "src": "lznf5.jpg",
+      "title": "سنسور اکسیژن طرح زیمنس پژو ۲۰۷ TU۵ برند LZNF",
+      "price": "۱,۳۷۴,۰۰۰",
+      "car": "پژو 207",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-6",
+      "src": "lznf6.jpg",
+      "title": "سنسور اکسیژن طرح بوش کابل مشکی پژو ۲۰۶ TU۵ برند LZNF",
+      "price": "۱,۲۷۳,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-7",
+      "src": "lznf7.jpg",
+      "title": "سنسور اکسیژن طرح بوش دنا EF۷ برند LZNF",
+      "price": "۲,۱۲۰,۰۰۰",
+      "car": "دنا EF7",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-8",
+      "src": "lznf8.jpg",
+      "title": "سنسور اکسیژن طول بلند طرح زیمنس پراید برند LZNF",
+      "price": "۱,۲۳۰,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": false,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-9",
+      "src": "lznf9.jpg",
+      "title": "سنسور اکسیژن طرح بوش سمند ملی EF۷ برند LZNF",
+      "price": "۲,۱۲۰,۰۰۰",
+      "car": "سمند",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-10",
+      "src": "lznf10.jpg",
+      "title": "سنسور اکسیژن طول بلند طرح زیمنس پژو ۲۰۶ TU۵ برند LZNF",
+      "price": "۱,۲۶۰,۰۰۰",
+      "car": "پزو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-11",
+      "src": "lznf11.jpg",
+      "title": "سنسور اکسیژن طرح بوش کابل مشکی پژو ۴۰۵ برند LZNF",
+      "price": "۱,۲۷۵,۰۰۰",
+      "car": "پژو 405",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    },
+    {
+      "id": "oxygen-sensor-12",
+      "src": "lznf12.jpg",
+      "title": "سنسور اکسیژن طول کوتاه طرح زیمنس پژو ۲۰۶ TU۵ برند LZNF",
+      "price": "1,245,000",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "oxygen-sensor"
+    }
+  ]
+}

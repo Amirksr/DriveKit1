@@ -1,0 +1,114 @@
+{
+  "motor-fan": [
+    {
+      "id": "motor-fan-1",
+      "src": "fan-1.jpg",
+      "title": "موتور فن دودور پراید برند آی آر امکو IREMCO",
+      "price": "۱,۳۶۴,۰۰۰",
+      "car": "پراید",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": false,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-2",
+      "src": "fan-2.jpg",
+      "title": "موتور فن خاری پژو پارس XU۷ برند آی آر امکو IREMCO",
+      "price": "۱,۴۰۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "IREMCO",
+      "discount": 5,
+      "instock": false,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-3",
+      "src": "fan-3.jpg",
+      "title": "موتور فن پژو ۲۰۶ برند آی آر امکو IREMCO",
+      "price": "۱,۴۶۵,۰۰۰",
+      "car": "پژو 206",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": true,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-4",
+      "src": "fan-4.jpg",
+      "title": "موتور فن خاری سمند XU۷ برند آی آر امکو IREMCO",
+      "price": "۱,۴۰۰,۰۰۰",
+      "car": "سمند",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": false,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-5",
+      "src": "fan-5.jpg",
+      "title": "موتور فن خاری پژو ۴۰۵ XU۷ برند آی آر امکو IREMCO",
+      "price": "۱,۴۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "کروIREMCOز",
+      "discount": 0,
+      "instock": true,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-6",
+      "src": "fan-6.jpg",
+      "title": "موتور فن پژو ۲۰۷ برند آی ار امکو IREMCO",
+      "price": "۱,۴۶۵,۰۰۰",
+      "car": "پژو 207",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": true,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-7",
+      "src": "fan-7.jpg",
+      "title": "موتور فن دو دور کوییک برند آی آر امکو IREMCO",
+      "price": "۱,۳۸۰,۰۰۰",
+      "car": "کوئیک",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": true,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-8",
+      "src": "fan-8.jpg",
+      "title": "موتور فن دودور تیبا برند آی ار امکو IREMCO",
+      "price": "۱,۳۸۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "IREMCO",
+      "discount": 5,
+      "instock": true,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-9",
+      "src": "fan-9.jpg",
+      "title": "موتور فن رانا برند آی ار امکو IREMCO",
+      "price": "۱,۴۶۵,۰۰۰",
+      "car": "رانا",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": true,
+      "category": "motor-fan"
+    },
+    {
+      "id": "motor-fan-10",
+      "src": "fan-10.jpg",
+      "title": "موتور فن دودور ساینا برند آی آر امکو IREMCO",
+      "price": "۱,۳۸۰,۰۰۰",
+      "car": "ساینا",
+      "brand": "IREMCO",
+      "discount": 5,
+      "instock": true,
+      "category": "motor-fan"
+    }
+  ]
+}

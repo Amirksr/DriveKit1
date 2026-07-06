@@ -1,0 +1,136 @@
+{
+  "bearing": [
+    {
+      "id": "bearing-1",
+      "src": "bearing-1.jpg",
+      "title": "بلبرینگ چرخ جلو پژو ۴۰۵ برند RSCO",
+      "price": "۷۳۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": false,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-2",
+      "src": "bearing-2.jpg",
+      "title": "بلبرینگ چرخ جلو پژو ۲۰۶ تیپ ۲ برند RSCO",
+      "price": "۶۲۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-3",
+      "src": "bearing-3.jpg",
+      "title": "بلبرینگ چرخ جلو پراید (طرح قدیم) برند RSCO",
+      "price": "۲۵۰,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-4",
+      "src": "bearing-4.jpg",
+      "title": "بلبرینگ توپی چرخ عقب ABS پژو ۲۰۶ برند RSCO",
+      "price": "۱,۶۰۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "ایروژان صنعت لوتوسساکو",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-5",
+      "src": "bearing-5.jpg",
+      "title": "بلبرینگ کف گرد سر کمک فنر پژو ۴۰۵ برند RSCO",
+      "price": "۲۵۵,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": false,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-6",
+      "src": "bearing-6.jpg",
+      "title": "بلبرینگ چرخ عقب بزرگ پراید برند RSCO",
+      "price": "۱۸۰,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-7",
+      "src": "bearing-7.jpg",
+      "title": "بلبرینگ چرخ عقب پراید (جدید) برند RSCO",
+      "price": "۱۷۰,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-8",
+      "src": "bearing-8.jpg",
+      "title": "بلبرینگ چرخ عقب پژو ۲۰۶ تیپ ۲ برند RSCO",
+      "price": "۵۲۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-9",
+      "src": "bearing-9.jpg",
+      "title": "بلبرینگ پلوس پژو ۴۰۵ برند RSCO",
+      "price": "۱۳۵,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-10",
+      "src": "bearing-10.jpg",
+      "title": "بلبرینگ توپی چرخ عقب پژو ۴۰۵ برند RSCO",
+      "price": "۱,۴۵۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-11",
+      "src": "bearing-11.jpg",
+      "title": "بلبرینگ سوزنی اکسل عقب پژو ۲۰۶ برند RSCO",
+      "price": "۳۵۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "bearing"
+    },
+    {
+      "id": "bearing-12",
+      "src": "bearing-12.jpg",
+      "title": "بلبرینگ چرخ عقب تارا برند RSCO",
+      "price": "۹۵۰,۰۰۰",
+      "car": "تارا",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "bearing"
+    }
+  ]
+}

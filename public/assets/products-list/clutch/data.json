@@ -1,0 +1,114 @@
+{
+  "clutch": [
+    {
+      "id": "clutch-1",
+      "src": "clutch1.jpg",
+      "title": "کیت کلاچ پژو پارس برند PHC VALEO",
+      "price": "۶,۲۲۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "والئو",
+      "discount": 5,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-2",
+      "src": "clutch-2.jpg",
+      "title": "کیت کلاچ کوئیک ۲۱۵ برند سکو با لیبل هرینگتون",
+      "price": "۶,۱۲۰,۰۰۰",
+      "car": "کوئیک",
+      "brand": "سکو",
+      "discount": 5,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-3",
+      "src": "clutch3.jpg",
+      "title": "کیت کلاچ ساینا ۲۱۵ برند سکو با لیبل هرینگتون",
+      "price": "۶,۱۲۰,۰۰۰",
+      "car": "ساینا",
+      "brand": "سکو",
+      "discount": 0,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-4",
+      "src": "clutch4.jpg",
+      "title": "کیت کلاچ سمند برند PHC VALEO",
+      "price": "۶,۲۷۰,۰۰۰",
+      "car": "سمند",
+      "brand": "والئو",
+      "discount": 0,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-5",
+      "src": "clutch5.jpg",
+      "title": "کیت کلاچ پژو ۴۰۵ برند PHC VALEO",
+      "price": "۶,۲۲۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "والئو",
+      "discount": 0,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-6",
+      "src": "clutch6.jpg",
+      "title": "کیت کلاچ پراید برند سکو با لیبل هرینگتون",
+      "price": "۳,۷۰۰,۰۰۰",
+      "car": "پراید",
+      "brand": "سکو",
+      "discount": 0,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-7",
+      "src": "clutch7.jpg",
+      "title": "کیت کلاچ پژو 207 برند PHC VALEO",
+      "price": "۶,۲۲۰,۰۰۰",
+      "car": "پژو 207",
+      "brand": "والئو",
+      "discount": 5,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-8",
+      "src": "clutch8.jpg",
+      "title": "کیت کلاچ دنا EF7 برند PHC VALEO",
+      "price": "۶,۲۷۰,۰۰۰",
+      "car": "دنا EF7",
+      "brand": "والئو",
+      "discount": 5,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-9",
+      "src": "clutch9.jpg",
+      "title": "کیت کلاچ پژو 206 برند PHC VALEO",
+      "price": "۶,۲۲۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "والئو",
+      "discount": 0,
+      "instock": true,
+      "category": "clutch"
+    },
+    {
+      "id": "clutch-10",
+      "src": "clutch10.jpg",
+      "title": "کیت کلاچ تیبا ۲۰۰ برند سکو با لیبل هرینگتون",
+      "price": "۵,۹۰۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "سکو",
+      "discount": 0,
+      "instock": true,
+      "category": "clutch"
+    }
+  ]
+}

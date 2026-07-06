@@ -1,0 +1,15 @@
+{
+  "relay-unit": [
+    {
+      "id": "relay-unit-1",
+      "src": "unit-1.jpg",
+      "title": "رله فن رادیاتور پژو ۴۰۵ برند EPS",
+      "price": "۱۱۸,۰۰۰",
+      "car": "پژو 405",
+      "brand": "ESP",
+      "discount": 5,
+      "instock": true,
+      "category": "relay-unit"
+    }
+  ]
+}

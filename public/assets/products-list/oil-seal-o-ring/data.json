@@ -1,0 +1,15 @@
+{
+  "oil-seal-o-ring": [
+    {
+      "id": "oil-seal-o-ring-1",
+      "src": "o-ring-1.jpg",
+      "title": "کاسه نمد و اورینگ ایساکو",
+      "price": "۲۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "ویکتور رینز",
+      "discount": 5,
+      "instock": true,
+      "category": "oil-seal-o-ring"
+    }
+  ]
+}

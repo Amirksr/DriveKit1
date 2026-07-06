@@ -1,0 +1,26 @@
+{
+  "head-gasket": [
+    {
+      "id": "head-gasket-1",
+      "src": "gasket-1.jpg",
+      "title": "واشر سرسیلندر ۲ میل پراید برند مشهد واشر",
+      "price": "۳۳۰,۰۰۰",
+      "car": "پراید",
+      "brand": "مشهد واشر",
+      "discount": 5,
+      "instock": true,
+      "category": "head-gasket"
+    },
+    {
+      "id": "head-gasket-2",
+      "src": "gasket-2.jpg",
+      "title": "واشر سرسیلندر ۱.۵ میل پراید برند مشهد واشر",
+      "price": "۳۲۵,۰۰۰",
+      "car": "پراید",
+      "brand": "مشهد واشر",
+      "discount": 0,
+      "instock": true,
+      "category": "head-gasket"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "spark-plug-wire": [
+    {
+      "id": "spark-plug-wire-1",
+      "src": "plug-wire-1.jpg",
+      "title": "شمع تك پلاتين پژو ۴۰۵ (۶۹۶۲) برند RSCO (۴ عدد)",
+      "price": "۴۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": false,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-2",
+      "src": "plug-wire-2.jpg",
+      "title": "شمع پايه بلند (۹۱۸۲۳) تیبا برند RSCO (۴ عدد)",
+      "price": "۴۲۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": false,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-3",
+      "src": "plug-wire-3.jpg",
+      "title": "شمع سوزني پايه بلند پلاتينيوم (۵۰۱۸) رانا برند RSCO (۴ عدد)",
+      "price": "۸۰۰,۰۰۰",
+      "car": "رانا",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-4",
+      "src": "plug-wire-4.jpg",
+      "title": "شمع سوزني پايه كوتاه پلاتينيوم (۷۰۹۲) شاهین برند RSCO (۴ عدد)",
+      "price": "۸۰۰,۰۰۰",
+      "car": "شاهین",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 5,
+      "instock": true,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-5",
+      "src": "plug-wire-5.jpg",
+      "title": "شمع پراید یورو ۴ (۹۴۹۳۷) برند RSCO (۴ عدد)",
+      "price": "۴۸۰,۰۰۰",
+      "car": "پراید",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": false,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-6",
+      "src": "plug-wire-6.jpg",
+      "title": "شمع دو پلاتين (۲۲۸۸) دنا برند RSCO (۴ عدد)",
+      "price": "۴۰۰,۰۰۰",
+      "car": "دنا EF7",
+      "brand": "روژان صنعت لوتوس",
+      "discount": 0,
+      "instock": true,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-7",
+      "src": "plug-wire-7.jpg",
+      "title": "شمع تک پلاتین پایه بلند ۶۰۷۶ دنسو  پژو 206(۴ عدد)",
+      "price": "۷۲۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "DENSO",
+      "discount": 5,
+      "instock": false,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-8",
+      "src": "plug-wire-8.jpg",
+      "title": "شمع پژو 405 تک پلاتین پایه کوتاه ۶۹۶۲ برند NGK (۴ عدد)",
+      "price": "۸۰۰,۰۰۰",
+      "car": "سمنپژو 405د",
+      "brand": "NGK",
+      "discount": 0,
+      "instock": false,
+      "category": "spark-plug-wire"
+    },
+    {
+      "id": "spark-plug-wire-9",
+      "src": "plug-wire-9.jpg",
+      "title": "شمع پژو 405 تک پلاتین پایه کوتاه ۶۹۶۲ برند NGK",
+      "price": "۲۰۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "NGK",
+      "discount": 5,
+      "instock": true,
+      "category": "spark-plug-wire"
+    }
+  ]
+}

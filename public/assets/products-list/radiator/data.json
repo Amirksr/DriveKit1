@@ -1,0 +1,92 @@
+{
+  "radiator": [
+    {
+      "id": "radiator-1",
+      "src": "radiator1.jpg",
+      "title": "رادیاتور آب پژو ۴۰۵ کلاسیک دو لول کوشش رادیاتور",
+      "price": "۴,۷۸۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": true,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-2",
+      "src": "radiator2.jpg",
+      "title": "رادیاتور آب رنو L90 تیپ E3 کوشش رادیاتور ",
+      "price": "۵,۸۷۰,۰۰۰",
+      "car": "L 90",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": true,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-3",
+      "src": "radiator3.jpg",
+      "title": "رادیاتور آب ام وی ام اتوماتیک X22 برند کوشش رادیاتور",
+      "price": "۷,۰۰۰,۰۰۰",
+      "car": "MVM X22",
+      "brand": "کوشش رادیاتور",
+      "discount": 5,
+      "instock": true,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-4",
+      "src": "radiator4.jpg",
+      "title": "رادیاتور آب  سمند گاز سوز برند کوشش رادیاتور EF7",
+      "price": "۴,۷۶۰,۰۰۰",
+      "car": "سمند",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": true,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-5",
+      "src": "radiator5.jpg",
+      "title": "رادیاتور آب تیبا برند کوشش رادیاتور",
+      "price": "۳,۷۰۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": true,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-6",
+      "src": "radiator6.jpg",
+      "title": "رادیاتور آب پژو 206 کوشش رادیاتور",
+      "price": "۳,۸۰۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": true,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-7",
+      "src": "radiator7.jpg",
+      "title": "رادیاتور آب پراید مدل 01 برند کوشش رادیاتور",
+      "price": "۲,۲۲۰,۰۰۰",
+      "car": "پراید",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": false,
+      "category": "radiator"
+    },
+    {
+      "id": "radiator-8",
+      "src": "radiator8.jpg",
+      "title": "رادیاتور اب پژو پارس با موتور XUP الومینیومی برند کوشش رادیاتور",
+      "price": "۴,۸۶۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "کوشش رادیاتور",
+      "discount": 0,
+      "instock": true,
+      "category": "radiator"
+    }
+  ]
+}

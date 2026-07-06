@@ -1,0 +1,37 @@
+{
+  "propeller-fan": [
+    {
+      "id": "propeller-fan-1",
+      "src": "propeller-1.jpg",
+      "title": "پروانه فن پژو ۲۰۶ برند آی ار امکو IREMCO",
+      "price": "۲۳۷,۰۰۰",
+      "car": "پژو 206",
+      "brand": "IREMCO",
+      "discount": 5,
+      "instock": true,
+      "category": "propeller-fan"
+    },
+    {
+      "id": "propeller-fan-2",
+      "src": "propeller-2.jpg",
+      "title": "پروانه فن پراید برند آی آر امکو IREMCO",
+      "price": "۲۱۰,۰۰۰",
+      "car": "پراید",
+      "brand": "IREMCO",
+      "discount": 0,
+      "instock": true,
+      "category": "propeller-fan"
+    },
+    {
+      "id": "propeller-fan-3",
+      "src": "propeller-3.jpg",
+      "title": "پروانه فن پژو ۴۰۵ برند آی آر امکو IREMCO",
+      "price": "۲۴۵,۰۰۰",
+      "car": "پژو 405",
+      "brand": "IREMCO",
+      "discount": 5,
+      "instock": true,
+      "category": "propeller-fan"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "thermostat": [
+    {
+      "id": "thermostat-1",
+      "src": "termo-1.jpg",
+      "title": "ترموستات ۷۵ درجه سمند برند ورنت فرانسه با لیبل هرینگتونز",
+      "price": "۴۱۰,۰۰۰",
+      "car": "سمند",
+      "brand": "ورنت",
+      "discount": 5,
+      "instock": false,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-2",
+      "src": "termo-2.jpg",
+      "title": "ترموستات ۷۵ درجه پژو پارس برند ورنت فرانسه با لیبل هرینگتون",
+      "price": "۴۱۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "ورنت",
+      "discount": 0,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-3",
+      "src": "termo-3.jpg",
+      "title": "ترموستات ۷۵ درجه پژو ۴۰۵ برند ورنت فرانسه با لیبل هرینگتون",
+      "price": "۴۱۰,۰۰۰",
+      "car": "پژو 405",
+      "brand": "ورنت",
+      "discount": 5,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-4",
+      "src": "termo-4.jpg",
+      "title": "ترموستات کامل ۸۳ درجه پژو ۲۰۶ برند باباپارت",
+      "price": "۱۹۷,۰۰۰",
+      "car": "پژو 206",
+      "brand": "باباپارت",
+      "discount": 0,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-5",
+      "src": "termo-5.jpg",
+      "title": "ترموستات ۷۵ درجه سمند ملی EF۷ برند باباپارت",
+      "price": "۱۶۱,۰۰۰",
+      "car": "سمند",
+      "brand": "باباپارت",
+      "discount": 5,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-6",
+      "src": "termo-6.jpg",
+      "title": "ترموستات ۷۵ درجه پژو ۲۰۶ برند باباپارت",
+      "price": "۱۵۸,۰۰۰",
+      "car": "پژو 206",
+      "brand": "باباپارت",
+      "discount": 5,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-7",
+      "src": "termo-7.jpg",
+      "title": "ترموستات ۷۶ درجه تیبا برند باباپارت",
+      "price": "۱۵۲,۰۰۰",
+      "car": "تیبا",
+      "brand": "باباپارت",
+      "discount": 5,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-8",
+      "src": "termo-8.jpg",
+      "title": "ترموستات ۷۶ درجه کوییک برند باباپارت",
+      "price": "۱۵۷,۰۰۰",
+      "car": "کوئیک",
+      "brand": "باباپارت",
+      "discount": 0,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-9",
+      "src": "termo-9.jpg",
+      "title": "ترموستات ۷۶ درجه ساینا برند باباپارت",
+      "price": "۱۵۸,۰۰۰",
+      "car": "ساینا",
+      "brand": "باباپارت",
+      "discount": 0,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-10",
+      "src": "termo-10.jpg",
+      "title": "ترموستات ۷۱ درجه پراید برند باباپارت",
+      "price": "۱۴۷,۰۰۰",
+      "car": "پراید",
+      "brand": "باباپارت",
+      "discount": 0,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-11",
+      "src": "termo-11.jpg",
+      "title": "ترموستات ۷۵ درجه L۹۰ برند باباپارت",
+      "price": "۱۵۵,۰۰۰",
+      "car": "L 90",
+      "brand": "باباپارت",
+      "discount": 0,
+      "instock": true,
+      "category": "thermostat"
+    },
+    {
+      "id": "thermostat-12",
+      "src": "termo-12.jpg",
+      "title": "ترموستات ۸۳ درجه پژو ۴۰۵ برند باباپارت",
+      "price": "۱۳۲,۰۰۰",
+      "car": "پژو 405",
+      "brand": "باباپارت",
+      "discount": 0,
+      "instock": false,
+      "category": "thermostat"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "throttle-sensor": [
+    {
+      "id": "throttle-sensor-1",
+      "src": "throttleSensor-1.jpg",
+      "title": "سنسور دریچه گاز خرگوشی طرح ساژم پژو پارس برند LZNF",
+      "price": "۴۲۰,۰۰۰",
+      "car": "پژو پارس",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-2",
+      "src": "throttleSensor-2.jpg",
+      "title": "سنسور دریچه گاز SSAT پژو ۴۰۵ برند LZNF",
+      "price": "۴۲۴,۰۰۰",
+      "car": "پژو 405",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-3",
+      "src": "throttleSensor-3.jpg",
+      "title": "سنسور دریچه گاز پشت پلاستیکی پژو ۲۰۶ برند LZNF",
+      "price": "۵۷۲,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": true,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-4",
+      "src": "throttleSensor-4.jpg",
+      "title": "سنسور دریچه گاز طرح زیمنس سمند برند LZNF",
+      "price": "۴۲۳,۰۰۰",
+      "car": "سمند",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": false,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-5",
+      "src": "throttleSensor-5.jpg",
+      "title": "سنسور دریچه گاز طرح ولئو ساژم پراید برند LZNF",
+      "price": "۴۴۷,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-6",
+      "src": "throttleSensor-6.jpg",
+      "title": "سنسور دریچه گاز پشت فلزی پژو ۲۰۶ برند LZNF",
+      "price": "۵۶۸,۰۰۰",
+      "car": "پژو 206",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-7",
+      "src": "throttleSensor-7.jpg",
+      "title": "سنسور دریچه گاز تیبا برند LZNF",
+      "price": "۴۱۶,۰۰۰",
+      "car": "تیبا",
+      "brand": "پارت فیدار",
+      "discount": 0,
+      "instock": true,
+      "category": "throttle-sensor"
+    },
+    {
+      "id": "throttle-sensor-8",
+      "src": "throttleSensor-8.jpg",
+      "title": "سنسور دریچه گاز پراید یورو ۴ برند LZNF",
+      "price": "۴۲۰,۰۰۰",
+      "car": "پراید",
+      "brand": "پارت فیدار",
+      "discount": 5,
+      "instock": false,
+      "category": "throttle-sensor"
+    }
+  ]
+}

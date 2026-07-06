@@ -1,0 +1,26 @@
+{
+  "hydraulic-pump": [
+    {
+      "id": "hydraulic-pump-2",
+      "src": "hydraPump2.jpg",
+      "title": "پمپ هیدرولیک پژو ۴۰۵ برند GISP",
+      "price": "۵,۱۵۰,۰۰۰",
+      "car": "پژو405",
+      "brand": "جی آی اس پی",
+      "discount": 5,
+      "instock": false,
+      "category": "hydraulic-pump"
+    },
+    {
+      "id": "hydraulic-pump-1",
+      "src": "hydraPump1.jpg",
+      "title": "پمپ هیدرولیک تیبا برند GISP",
+      "price": "۵,۸۰۰,۰۰۰",
+      "car": "تیبا",
+      "brand": "جی آی اس پی",
+      "discount": 5,
+      "instock": true,
+      "category": "hydraulic-pump"
+    }
+  ]
+}

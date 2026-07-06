@@ -1,0 +1,15 @@
+{
+  "steering-valve": [
+    {
+      "id": "steering-valve-1",
+      "src": "steering-1.jpg",
+      "title": "شیر جعبه فرمان پژو ۲۰۶ برند GISP",
+      "price": "۴,۳۷۰,۰۰۰",
+      "car": "پژو 206",
+      "brand": "جی آی اس پی",
+      "discount": 5,
+      "instock": true,
+      "category": "steering-valve"
+    }
+  ]
+}

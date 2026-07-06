@@ -1,0 +1,59 @@
+{
+  "tire-r16": [
+    {
+      "id": "tire-r16-1",
+      "src": "r16-1.jpg",
+      "title": "لاستیک MVM X۲۲ کویر تایر مدل KB۵۵ سایز ۲۰۵/۵۵R۱۶ (۲۰۲۴)",
+      "price": "۷,۰۰۰,۰۰۰",
+      "car": "MVM X22",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r16"
+    },
+    {
+      "id": "tire-r16-2",
+      "src": "r16-2.jpg",
+      "title": "لاستیک MVM X۳۳ کویر تایر مدل KB۶۶ سایز ۲۱۵/۶۵R۱۶ (۲۰۲۵)",
+      "price": "۷,۹۸۰,۰۰۰",
+      "car": "MVM X33",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r16"
+    },
+    {
+      "id": "tire-r16-3",
+      "src": "r16-3.jpg",
+      "title": "لاستیک لیفان X۶۰ کویر تایر مدل KB۵۷ سایز ۲۱۵/۶۰R۱۶ (۲۰۲۵)",
+      "price": "۷,۹۸۰,۰۰۰",
+      "car": "لیفان X60",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r16"
+    },
+    {
+      "id": "tire-r16-4",
+      "src": "r16-4.jpg",
+      "title": "لاستیک H۳۰ Cross کویر تایر مدل KB۴۴ سایز ۲۰۵/۵۰R۱۶ (۲۰۲۴)",
+      "price": "۷,۰۰۰,۰۰۰",
+      "car": "دانگ فنگ H30 cross",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r16"
+    },
+    {
+      "id": "tire-r16-5",
+      "src": "r16-5.jpg",
+      "title": "لاستیک H۳۰ Cross کویر تایر مدل KB۴۴ سایز ۲۰۵/۵۰R۱۶ (۲۰۲۵)",
+      "price": "۷,۹۸۰,۰۰۰",
+      "car": "دانگ فنگ H30 cross",
+      "brand": "کویرتایر",
+      "discount": 0,
+      "instock": true,
+      "category": "tire-r16"
+    }
+  ]
+}
