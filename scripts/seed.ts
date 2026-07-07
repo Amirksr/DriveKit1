@@ -12,12 +12,19 @@
  * so re-running it after editing a JSON file simply updates the matching
  * documents instead of creating duplicates.
  */
-import "dotenv/config";
+import { config as loadEnv } from "dotenv";
+import { existsSync } from "node:fs";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import mongoose from "mongoose";
 import Product from "../src/models/Product";
 import type { RawProduct } from "../src/types/product";
+
+// Plain Node scripts (unlike Next.js itself) don't automatically load
+// `.env.local` — only Next's own dev/build process does that. We load it
+// explicitly here, falling back to `.env` if `.env.local` doesn't exist.
+const envLocalPath = path.join(process.cwd(), ".env.local");
+loadEnv({ path: existsSync(envLocalPath) ? envLocalPath : path.join(process.cwd(), ".env") });
 
 const CATALOGUE_DIR = path.join(process.cwd(), "public", "assets", "products-list");
 
