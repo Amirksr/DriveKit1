@@ -60,7 +60,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white">
+    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/85 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4">
         {/* Desktop */}
         <div className="hidden md:block">
