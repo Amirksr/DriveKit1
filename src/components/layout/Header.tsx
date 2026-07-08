@@ -21,6 +21,7 @@ import {
 
 import { NAV_CATEGORIES } from "@/data/categories";
 import { useAppSelector } from "@/redux/hooks";
+import CategorySearch from "./CategorySearch";
 
 const NAV_LINKS = [
   { href: "/", label: "صفحه اصلی", icon: FaHome },
@@ -30,17 +31,24 @@ const NAV_LINKS = [
   { href: "/blog", label: "بلاگ", icon: FaBlog },
 ];
 
+/** Soft fade + slide transition used for the category sub-menu panel, matching the original's `submenuVariants`. */
+const submenuVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" as const } },
+  exit: { opacity: 0, y: 10, transition: { duration: 0.2 } },
+};
+
 /**
  * Site header with a desktop mega-menu (category list + expandable
- * sub-categories) and a mobile drawer. Built with plain Tailwind + Framer
- * Motion instead of react-bootstrap's Offcanvas/Modal, removing the
- * Bootstrap dependency entirely.
+ * sub-categories) and a mobile drawer + search overlay. Built with plain
+ * Tailwind + Framer Motion instead of react-bootstrap's Offcanvas/Modal.
  */
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<number | null>(null);
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
 
   const cartItems = useAppSelector((state) => state.cart.items);
   const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -60,14 +68,7 @@ export default function Header() {
             <Link href="/" className="shrink-0 text-xl font-extrabold text-brand-600">
               ADORA YADAK
             </Link>
-            <div className="relative flex-1">
-              <input
-                type="text"
-                placeholder="...جستجو"
-                className="w-full rounded-lg border border-gray-200 py-2 ps-4 pe-10 focus:border-brand-400 focus:outline-none"
-              />
-              <FaSearch className="absolute end-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            </div>
+            <CategorySearch className="flex-1" />
             <Link href="/cart" className="relative rounded-full bg-gray-100 p-3 hover:bg-gray-200">
               <FaShoppingCart />
               {totalQuantity > 0 && (
@@ -90,52 +91,73 @@ export default function Header() {
               onMouseEnter={() => setIsMenuOpen(true)}
               onMouseLeave={() => setIsMenuOpen(false)}
             >
-              <button type="button" className="flex items-center gap-2">
+              <button
+                type="button"
+                className={`flex items-center gap-2 font-bold transition-colors ${
+                  isMenuOpen ? "text-brand-500" : "text-gray-700"
+                }`}
+              >
                 <FaList /> دسته‌بندی‌ها
                 <FaChevronDown
-                  className={`transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
+                  className={`text-xs transition-all duration-300 ${
+                    isMenuOpen ? "rotate-180 text-brand-500" : "text-gray-400"
+                  }`}
                 />
               </button>
 
               <AnimatePresence>
                 {isMenuOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute start-0 top-full z-50 flex w-[640px] rounded-xl border border-gray-100 bg-white shadow-xl"
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={submenuVariants}
+                    className="absolute start-0 top-full z-50 flex w-[520px] rounded-xl border border-gray-100 bg-white shadow-xl"
                   >
-                    <ul className="w-56 border-e border-gray-100 py-2">
+                    <ul className="w-1/2 border-e border-gray-100 py-2">
                       {NAV_CATEGORIES.map((cat, idx) => (
                         <li
                           key={cat.name}
                           onMouseEnter={() => setActiveCategory(idx)}
-                          className={`flex cursor-default items-center justify-between px-4 py-2 text-sm hover:bg-brand-50 ${
-                            activeCategory === idx ? "bg-brand-50 font-semibold" : ""
+                          className={`flex cursor-default items-center justify-between px-4 py-2 text-sm transition-colors duration-300 ${
+                            activeCategory === idx ? "text-brand-500" : "text-gray-700"
                           }`}
                         >
                           <span>{cat.name}</span>
-                          {cat.sub && <FaChevronLeft className="text-xs text-gray-400" />}
+                          {cat.sub && (
+                            <FaChevronLeft
+                              className={`text-xs transition-colors ${
+                                activeCategory === idx ? "text-brand-500" : "text-gray-400"
+                              }`}
+                            />
+                          )}
                         </li>
                       ))}
                     </ul>
-                    <div className="flex-1 p-4">
-                      {activeCategory !== null && NAV_CATEGORIES[activeCategory]?.sub && (
-                        <ul className="grid grid-cols-2 gap-2">
-                          {NAV_CATEGORIES[activeCategory].sub!.map((subItem) => (
-                            <li key={subItem}>
-                              <Link
-                                href={`/products/list?category=${encodeURIComponent(subItem)}`}
-                                onClick={closeAllMenus}
-                                className="block rounded-md px-2 py-1 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-600"
-                              >
-                                {subItem}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                    <div className="w-1/2 p-2">
+                      <AnimatePresence mode="wait">
+                        {activeCategory !== null && NAV_CATEGORIES[activeCategory]?.sub && (
+                          <motion.ul
+                            key={activeCategory}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            variants={submenuVariants}
+                          >
+                            {NAV_CATEGORIES[activeCategory].sub!.map((subItem) => (
+                              <li key={subItem}>
+                                <Link
+                                  href={`/products/list?category=${encodeURIComponent(subItem)}`}
+                                  onClick={closeAllMenus}
+                                  className="block rounded-md px-2 py-1.5 text-sm text-gray-600 transition-colors duration-300 hover:bg-gray-50 hover:text-brand-500"
+                                >
+                                  {subItem}
+                                </Link>
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </motion.div>
                 )}
@@ -156,6 +178,14 @@ export default function Header() {
             ADORA YADAK
           </Link>
           <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setIsMobileSearchOpen(true)}
+              aria-label="جستجو"
+              className="rounded-full bg-gray-100 p-2.5"
+            >
+              <FaSearch />
+            </button>
             <Link href="/cart" className="relative rounded-full bg-gray-100 p-2.5">
               <FaShoppingCart />
               {totalQuantity > 0 && (
@@ -175,6 +205,44 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Mobile search overlay */}
+      <AnimatePresence>
+        {isMobileSearchOpen && (
+          <>
+            <motion.div
+              className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileSearchOpen(false)}
+            />
+            <motion.div
+              className="fixed inset-x-0 top-0 z-50 bg-white p-4 shadow-lg md:hidden"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+              <div className="flex items-center gap-2">
+                <CategorySearch
+                  className="flex-1"
+                  autoFocus
+                  onNavigate={() => setIsMobileSearchOpen(false)}
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsMobileSearchOpen(false)}
+                  aria-label="بستن جستجو"
+                  className="shrink-0 rounded-full bg-gray-100 p-2.5"
+                >
+                  <FaTimes />
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Mobile drawer */}
       <AnimatePresence>
@@ -212,7 +280,9 @@ export default function Header() {
                       onClick={() =>
                         setMobileActiveCategory(mobileActiveCategory === idx ? null : idx)
                       }
-                      className="flex w-full items-center justify-between py-1 text-start text-sm"
+                      className={`flex w-full items-center justify-between py-1 text-start text-sm transition-colors ${
+                        mobileActiveCategory === idx ? "text-brand-500" : "text-gray-700"
+                      }`}
                     >
                       <span>{cat.name}</span>
                       {cat.sub && (
@@ -223,21 +293,29 @@ export default function Header() {
                         />
                       )}
                     </button>
-                    {mobileActiveCategory === idx && cat.sub && (
-                      <ul className="ps-3">
-                        {cat.sub.map((subItem) => (
-                          <li key={subItem}>
-                            <Link
-                              href={`/products/list?category=${encodeURIComponent(subItem)}`}
-                              onClick={closeAllMenus}
-                              className="block py-1 text-sm text-gray-500 hover:text-brand-600"
-                            >
-                              {subItem}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    <AnimatePresence>
+                      {mobileActiveCategory === idx && cat.sub && (
+                        <motion.ul
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          variants={submenuVariants}
+                          className="ps-3"
+                        >
+                          {cat.sub.map((subItem) => (
+                            <li key={subItem}>
+                              <Link
+                                href={`/products/list?category=${encodeURIComponent(subItem)}`}
+                                onClick={closeAllMenus}
+                                className="block py-1 text-sm text-gray-500 transition-colors hover:text-brand-600"
+                              >
+                                {subItem}
+                              </Link>
+                            </li>
+                          ))}
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
                   </div>
                 ))}
               </div>
