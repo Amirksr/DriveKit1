@@ -120,7 +120,7 @@ export default function Hero() {
               whileInView="visible"
               viewport={{ amount: 0.3, once: true }}
               variants={tireVariants}
-              className="pointer-events-none absolute end-[35%] top-1/2 z-0 w-4/5 -translate-y-1/2 blur-[0.5px]"
+              className="pointer-events-none absolute right-[35%] top-1/2 z-0 w-4/5 -translate-y-1/2 blur-[0.5px]"
             />
             <motion.div
               initial="hidden"
