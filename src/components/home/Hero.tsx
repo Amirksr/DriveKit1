@@ -92,8 +92,8 @@ export default function Hero() {
         </div>
 
         <div className="relative flex min-h-[300px] w-full items-center justify-center bg-white md:min-h-[400px] md:w-1/2 md:bg-[linear-gradient(to_right,_#1e3a5f_50%,_#ffffff_50%)]">
-          {/* Social icons, anchored near the right edge like the original */}
-          <div className="absolute end-2 top-[35%] z-[5] hidden -translate-y-1/2 flex-col md:flex">
+          {/* Social icons: vertically centered, pinned to the physical left of the car image */}
+          <div className="absolute left-2 top-1/2 z-[5] hidden -translate-y-1/2 flex-col md:flex">
             {socialIcons.map((Icon, index) => (
               <motion.a
                 key={index}
@@ -127,7 +127,7 @@ export default function Hero() {
               whileInView="visible"
               viewport={{ amount: 0.3, once: true }}
               variants={carVariants}
-              className="relative z-[1]"
+              className="relative z-[1] scale-110 md:scale-125"
             >
               <Image src={carImage} alt="خودروی نمایشی" priority className="w-full" />
             </motion.div>
