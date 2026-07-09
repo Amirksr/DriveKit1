@@ -60,7 +60,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-gray-100">
       <div className="mx-auto max-w-7xl px-4">
         {/* Desktop */}
         <div className="hidden md:block">
@@ -85,7 +85,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="flex items-center gap-6 pb-3 text-sm font-medium text-gray-700">
+          <nav className="flex items-center gap-6 bg-white pb-3 pt-1 text-sm font-medium text-gray-700">
             <div
               className="relative"
               onMouseEnter={() => setIsMenuOpen(true)}
@@ -173,7 +173,7 @@ export default function Header() {
         </div>
 
         {/* Mobile */}
-        <div className="flex items-center justify-between py-3 md:hidden">
+        <div className="flex items-center justify-between bg-white py-3 md:hidden">
           <Link href="/" className="text-lg font-extrabold text-brand-600">
             ADORA YADAK
           </Link>
