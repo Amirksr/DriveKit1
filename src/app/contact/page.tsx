@@ -11,7 +11,7 @@ const CONTACT_INFO = [
   {
     icon: FaMapMarkerAlt,
     title: "آدرس فروشگاه",
-    detail: "اصفهان، میدان منیریه، خیابان پانزده خرداد، کوچه ملکی، پلاک ۶",
+    detail: "تهران، میدان منیریه، خیابان پانزده خرداد، کوچه ملکی، پلاک ۶",
   },
   { icon: FaPhoneAlt, title: "تلفن پشتیبانی", detail: "۰۹۱۲-۸۹۳-۶۶۴۵" },
   { icon: FaEnvelope, title: "ایمیل", detail: "support@adorayadak.example" },
