@@ -85,7 +85,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="flex items-center gap-6 bg-white pb-3 pt-1 text-sm font-medium text-gray-700">
+          <nav className="flex items-center gap-2 pb-3 pt-1 text-sm font-medium text-gray-700">
             <div
               className="relative"
               onMouseEnter={() => setIsMenuOpen(true)}
@@ -93,7 +93,7 @@ export default function Header() {
             >
               <button
                 type="button"
-                className={`flex items-center gap-2 font-bold transition-colors ${
+                className={`flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 font-bold shadow-sm backdrop-blur-sm transition-colors ${
                   isMenuOpen ? "text-brand-500" : "text-gray-700"
                 }`}
               >
@@ -165,7 +165,11 @@ export default function Header() {
             </div>
 
             {NAV_LINKS.map(({ href, label, icon: Icon }) => (
-              <Link key={href} href={href} className="flex items-center gap-1 hover:text-brand-600">
+              <Link
+                key={href}
+                href={href}
+                className="flex items-center gap-1.5 rounded-full bg-white/75 px-3 py-1.5 text-gray-700 shadow-sm backdrop-blur-sm transition-colors hover:text-brand-600"
+              >
                 <Icon /> {label}
               </Link>
             ))}
@@ -256,7 +260,7 @@ export default function Header() {
               onClick={() => setIsMobileDrawerOpen(false)}
             />
             <motion.aside
-              className="fixed inset-y-0 end-0 z-50 w-72 overflow-y-auto bg-white p-4 shadow-2xl md:hidden"
+              className="fixed top-0 end-0 z-50 h-dvh w-72 overflow-y-auto bg-white p-4 shadow-2xl md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

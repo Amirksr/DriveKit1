@@ -21,7 +21,7 @@ export default function HomePage() {
         */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 z-0 h-16 bg-white md:h-20 md:bg-[linear-gradient(to_right,_#1e3a5f_50%,_#ffffff_50%)]"
+          className="pointer-events-none absolute inset-x-0 top-0 z-0 h-16 bg-white md:h-36 md:bg-[linear-gradient(to_right,_#1e3a5f_50%,_#ffffff_50%)]"
         />
         <Header />
       </div>
