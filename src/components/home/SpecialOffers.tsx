@@ -19,7 +19,12 @@ import { useAddToCart } from "@/lib/useAddToCart";
  * in one place.
  */
 export default function SpecialOffers() {
-  const { products } = useProducts({ discountOnly: true, random: true, limit: 30 });
+  const { products } = useProducts({
+    discountOnly: true,
+    inStockOnly: true,
+    random: true,
+    limit: 30,
+  });
   const addToCart = useAddToCart();
   const swiperRef = useRef<SwiperType | null>(null);
   const [slidesPerView, setSlidesPerView] = useState(4);
@@ -76,7 +81,7 @@ export default function SpecialOffers() {
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          className="pb-10"
+          className="!pb-14"
         >
           {products.map((product, index) => (
             <SwiperSlide key={`${product.id}-${index}`}>

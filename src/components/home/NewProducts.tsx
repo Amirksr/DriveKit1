@@ -64,7 +64,7 @@ export default function NewProducts() {
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          className="pb-10"
+          className="!pb-14"
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
