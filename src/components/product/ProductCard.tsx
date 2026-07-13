@@ -95,12 +95,17 @@ export default function ProductCard({
 
       <div className="flex flex-1 flex-col items-center text-center">
         {/* Title: reserved to exactly one line; expands as a floating
-            overlay on hover/click instead of growing this box, so it
-            never shifts the price/button below or neighboring cards. */}
-        <div className="relative mb-1 h-8 w-full sm:h-9">
+            overlay on hover instead of growing this box, so it never
+            shifts the price/button below or neighboring cards. Falls
+            back to tap-to-toggle on touch devices, which have no hover. */}
+        <div
+          className="relative mb-1 h-8 w-full sm:h-9"
+          onMouseEnter={() => setIsTitleOpen(true)}
+          onMouseLeave={() => setIsTitleOpen(false)}
+        >
           <h3
             onClick={handleTitleClick}
-            className={`absolute inset-x-0 top-0 cursor-pointer text-xs font-semibold text-gray-800 sm:text-sm ${
+            className={`absolute inset-x-0 top-0 cursor-default text-xs font-semibold text-gray-800 sm:text-sm ${
               isTitleOpen
                 ? "z-20 rounded-lg bg-white p-1.5 text-start shadow-lg"
                 : "truncate"
