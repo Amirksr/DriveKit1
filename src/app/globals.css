@@ -16,3 +16,23 @@
 .swiper-pagination-bullet-active {
   background-color: theme("colors.brand.500") !important;
 }
+
+/*
+ * Push the pagination dots clearly below the slide content instead of
+ * sitting right against (or overlapping) the bottom edge of the cards.
+ * Carousels that use this pagination give the swiper extra bottom
+ * padding (see `!pb-14` on <Swiper>) specifically to make room for this.
+ */
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0 !important;
+}
+
+/* Hides the scrollbar on horizontally-scrollable strips (e.g. the mobile
+   category filter row) while keeping them fully scrollable via touch/drag. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
