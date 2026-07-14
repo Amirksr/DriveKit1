@@ -11,7 +11,21 @@ const smallBanners = [
   { src: banner5, title: "تسمه تایم و کیت تایم", desc: "به موقع تعویض کن!", delay: 0.3 },
 ];
 
-/** Secondary banner row: two stacked small banners + one large feature banner. */
+/** Shared button style so the "buy" button is the exact same size across all three banners. */
+const buyButtonClass =
+  "mt-1 w-fit rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md transition-transform hover:scale-105";
+
+/** Shared caption-text style: white with a drop-shadow for legibility directly over the photo — no dark backdrop behind it. */
+const captionTextClass = "text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.85)]";
+
+/**
+ * Secondary banner row: two stacked small banners + one large feature
+ * banner. Each banner's caption (title + description + button) sits
+ * directly over the image with no dark backdrop — legibility comes from
+ * a text-shadow instead of a matte/glass panel — and is anchored to the
+ * bottom-LEFT, using `dir="ltr"` so the button/text lean left regardless
+ * of the page's overall RTL direction.
+ */
 export default function OfferBanners2() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-10">
@@ -24,15 +38,16 @@ export default function OfferBanners2() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: item.delay }}
-              className="relative overflow-hidden rounded-2xl"
+              className="relative h-48 overflow-hidden rounded-2xl sm:h-56 lg:h-[190px]"
             >
-              <Image src={item.src} alt={item.title} className="w-full object-cover" />
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                <h5 className="font-bold">{item.title}</h5>
-                <p className="text-sm">{item.desc}</p>
-                <button className="mt-2 w-fit rounded-lg bg-white px-3 py-1 text-xs font-semibold text-gray-900">
-                  خرید
-                </button>
+              <Image src={item.src} alt={item.title} fill className="object-cover" />
+              <div
+                dir="ltr"
+                className="absolute bottom-0 start-0 flex max-w-[70%] flex-col items-start gap-0.5 p-4"
+              >
+                <h5 className={`font-bold ${captionTextClass}`}>{item.title}</h5>
+                <p className={`text-sm ${captionTextClass}`}>{item.desc}</p>
+                <button className={buyButtonClass}>خرید</button>
               </div>
             </motion.div>
           ))}
@@ -43,15 +58,16 @@ export default function OfferBanners2() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="relative overflow-hidden rounded-2xl lg:col-span-8"
+          className="relative h-48 overflow-hidden rounded-2xl sm:h-56 lg:col-span-8 lg:h-[400px]"
         >
-          <Image src={banner6} alt="دیسک و لنت" className="w-full object-cover" />
-          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-6 text-white">
-            <h5 className="text-lg font-bold">دیسک و لنت</h5>
-            <p>دنبال بهترین برندهایی؟</p>
-            <button className="mt-3 w-fit rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900">
-              خرید
-            </button>
+          <Image src={banner6} alt="دیسک و لنت" fill className="object-cover" />
+          <div
+            dir="ltr"
+            className="absolute bottom-0 start-0 flex max-w-[70%] flex-col items-start gap-1 p-6"
+          >
+            <h5 className={`text-lg font-bold ${captionTextClass}`}>دیسک و لنت</h5>
+            <p className={captionTextClass}>دنبال بهترین برندهایی؟</p>
+            <button className={buyButtonClass}>خرید</button>
           </div>
         </motion.div>
       </div>
