@@ -10,6 +10,7 @@ import { getProducts } from "@/lib/products";
  *   minPrice    - number, Toman
  *   maxPrice    - number, Toman
  *   discount    - "1" to only return discounted products
+ *   excludeDiscount - "1" to only return products that are NOT discounted
  *   inStock     - "1" to only return in-stock products
  *   limit       - max number of results
  *   random      - "1" to shuffle results server-side (MongoDB $sample)
@@ -28,6 +29,7 @@ export async function GET(request: NextRequest) {
       minPrice: params.has("minPrice") ? Number(params.get("minPrice")) : undefined,
       maxPrice: params.has("maxPrice") ? Number(params.get("maxPrice")) : undefined,
       discountOnly: params.get("discount") === "1",
+      excludeDiscounted: params.get("excludeDiscount") === "1",
       inStockOnly: params.get("inStock") === "1",
       limit: params.has("limit") ? Number(params.get("limit")) : undefined,
       random: params.get("random") === "1",

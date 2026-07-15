@@ -20,6 +20,37 @@ export default function AllProductsPage() {
   const addToCart = useAddToCart();
 
   const filterButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  // Click-and-drag scrolling for the category strip, so it can be
+  // scrolled with a mouse (not just touch) — e.g. when a desktop browser
+  // window is simply resized down to mobile width, where there's no
+  // touch input and the scrollbar itself is intentionally hidden.
+  const dragState = useRef({ isDown: false, startX: 0, startScrollLeft: 0, moved: false });
+
+  const handlePointerDown = (event: React.MouseEvent) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    dragState.current = {
+      isDown: true,
+      startX: event.pageX,
+      startScrollLeft: el.scrollLeft,
+      moved: false,
+    };
+  };
+
+  const handlePointerMove = (event: React.MouseEvent) => {
+    const el = scrollerRef.current;
+    const drag = dragState.current;
+    if (!el || !drag.isDown) return;
+    const delta = event.pageX - drag.startX;
+    if (Math.abs(delta) > 4) drag.moved = true;
+    el.scrollLeft = drag.startScrollLeft - delta;
+  };
+
+  const endDrag = () => {
+    dragState.current.isDown = false;
+  };
 
   const categories = useMemo(() => [ALL_LABEL, ...CATEGORY_LABELS], []);
 
@@ -54,6 +85,9 @@ export default function AllProductsPage() {
   });
 
   const handleFilterClick = (category: string) => {
+    // A drag that moved the strip shouldn't also register as picking
+    // whichever button the cursor happened to release over.
+    if (dragState.current.moved) return;
     setActiveFilter(category);
     setSearch("");
   };
@@ -77,9 +111,16 @@ export default function AllProductsPage() {
 
           {/* Category filter strip: a horizontally scrollable row on
               mobile (matching the original project), wraps normally from
-              the `sm` breakpoint up. */}
+              the `sm` breakpoint up. Also drag-scrollable with the mouse. */}
           <div className="relative">
-            <div className="no-scrollbar flex gap-2 overflow-x-auto whitespace-nowrap sm:flex-wrap sm:overflow-visible sm:whitespace-normal">
+            <div
+              ref={scrollerRef}
+              onMouseDown={handlePointerDown}
+              onMouseMove={handlePointerMove}
+              onMouseUp={endDrag}
+              onMouseLeave={endDrag}
+              className="no-scrollbar flex cursor-grab gap-2 overflow-x-auto whitespace-nowrap active:cursor-grabbing sm:cursor-auto sm:flex-wrap sm:overflow-visible sm:whitespace-normal"
+            >
               {categories.map((cat) => {
                 const isActive =
                   (activeFilter === cat && !search) || cat === searchMatchedCategory;
@@ -90,7 +131,7 @@ export default function AllProductsPage() {
                       filterButtonRefs.current[cat] = el;
                     }}
                     onClick={() => handleFilterClick(cat)}
-                    className={`shrink-0 rounded-full border px-3 py-1.5 text-sm transition-colors ${
+                    className={`shrink-0 select-none rounded-full border px-3 py-1.5 text-sm transition-colors ${
                       isActive
                         ? "border-brand-500 bg-brand-500 text-white"
                         : "border-gray-200 text-gray-600 hover:border-brand-300"
@@ -145,3 +186,4 @@ export default function AllProductsPage() {
     </>
   );
 }
+

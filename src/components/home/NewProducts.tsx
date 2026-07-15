@@ -15,6 +15,7 @@ import { useAddToCart } from "@/lib/useAddToCart";
 export default function NewProducts() {
   const { products, isLoading } = useProducts({
     inStockOnly: true,
+    excludeDiscounted: true,
     random: true,
     limit: 8,
   });

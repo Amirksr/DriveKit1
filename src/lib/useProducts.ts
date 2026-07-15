@@ -9,6 +9,8 @@ export interface UseProductsOptions {
   minPrice?: number;
   maxPrice?: number;
   discountOnly?: boolean;
+  /** Excludes discounted products — used by "new arrivals" style sections. */
+  excludeDiscounted?: boolean;
   inStockOnly?: boolean;
   limit?: number;
   random?: boolean;
@@ -49,6 +51,7 @@ export function useProducts(options: UseProductsOptions = {}): UseProductsResult
         if (opts.minPrice !== undefined) params.set("minPrice", String(opts.minPrice));
         if (opts.maxPrice !== undefined) params.set("maxPrice", String(opts.maxPrice));
         if (opts.discountOnly) params.set("discount", "1");
+        if (opts.excludeDiscounted) params.set("excludeDiscount", "1");
         if (opts.inStockOnly) params.set("inStock", "1");
         if (opts.limit !== undefined) params.set("limit", String(opts.limit));
         if (opts.random) params.set("random", "1");

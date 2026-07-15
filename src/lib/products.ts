@@ -14,6 +14,8 @@ export interface ProductQuery {
   minPrice?: number;
   maxPrice?: number;
   discountOnly?: boolean;
+  /** Excludes discounted products — used by "new arrivals" style sections where a fresh product shouldn't already be on sale. */
+  excludeDiscounted?: boolean;
   inStockOnly?: boolean;
   /** Maximum number of documents to return. Omit for no limit. */
   limit?: number;
@@ -67,6 +69,10 @@ export async function getProducts(query: ProductQuery = {}): Promise<ProductDTO[
 
   if (query.discountOnly) {
     filter.discount = { $gt: 0 };
+  }
+
+  if (query.excludeDiscounted) {
+    filter.discount = { $lte: 0 };
   }
 
   if (query.inStockOnly) {
