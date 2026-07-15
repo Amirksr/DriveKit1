@@ -81,6 +81,20 @@ describe("getProducts (MongoDB integration)", () => {
     expect(products).toHaveLength(2);
   });
 
+  it("filters by multiple categories at once (union of their products)", async () => {
+    const products = await getProducts({ categories: ["لنت ترمز", "رادیاتور"] });
+    expect(products.map((p) => p.id).sort()).toEqual([
+      "brake-pad-1",
+      "brake-pad-2",
+      "radiator-1",
+    ]);
+  });
+
+  it("returns zero results when `categories` is an explicitly empty array", async () => {
+    const products = await getProducts({ categories: [] });
+    expect(products).toHaveLength(0);
+  });
+
   it("filters to discounted products only", async () => {
     const products = await getProducts({ discountOnly: true });
     expect(products.map((p) => p.id).sort()).toEqual(["brake-pad-1", "radiator-1"]);

@@ -6,6 +6,9 @@ import { getProducts } from "@/lib/products";
  *
  * Query params (all optional):
  *   category    - Persian label or slug, e.g. "لنت ترمز" or "brake-pad"
+ *   categories  - comma-separated list of labels/slugs (union of all their products);
+ *                 takes precedence over `category`. Pass an empty string to force zero results
+ *                 (used when a category-name search matched nothing).
  *   search      - free-text match against title/brand
  *   minPrice    - number, Toman
  *   maxPrice    - number, Toman
@@ -25,6 +28,9 @@ export async function GET(request: NextRequest) {
   try {
     const products = await getProducts({
       category: params.get("category") ?? undefined,
+      categories: params.has("categories")
+        ? (params.get("categories") ?? "").split(",").filter(Boolean)
+        : undefined,
       search: params.get("search") ?? undefined,
       minPrice: params.has("minPrice") ? Number(params.get("minPrice")) : undefined,
       maxPrice: params.has("maxPrice") ? Number(params.get("maxPrice")) : undefined,

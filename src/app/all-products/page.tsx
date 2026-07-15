@@ -12,6 +12,8 @@ import { useAddToCart } from "@/lib/useAddToCart";
 import { CATEGORY_LABELS } from "@/data/categories";
 
 const ALL_LABEL = "همه";
+/** Search only takes effect once at least this many characters have been typed, to avoid noisy 1-2 letter matches. */
+const MIN_SEARCH_LENGTH = 3;
 
 export default function AllProductsPage() {
   const [search, setSearch] = useState("");
@@ -54,24 +56,30 @@ export default function AllProductsPage() {
 
   const categories = useMemo(() => [ALL_LABEL, ...CATEGORY_LABELS], []);
 
-  // The category whose name the current search text matches, if any —
-  // used to highlight and auto-scroll that button in the filter strip so
-  // typing a category name visually syncs with the row below the search
-  // box, the same way the original project's search worked.
-  const searchMatchedCategory = useMemo(() => {
+  // The search box only ever matches against category names (the
+  // sub-topics shown in the strip below it) — never product titles,
+  // brands, car names, or numbers — and only once at least
+  // `MIN_SEARCH_LENGTH` characters have been typed. `null` means "search
+  // isn't active" (too short/empty); an array (possibly empty) means
+  // "search is active", filtering to the union of every matching
+  // category's products, with all of them highlighted at once.
+  const matchedCategories = useMemo(() => {
     const query = search.trim();
-    if (!query) return null;
-    return CATEGORY_LABELS.find((label) => label.includes(query)) ?? null;
+    if (query.length < MIN_SEARCH_LENGTH) return null;
+    return CATEGORY_LABELS.filter((label) => label.includes(query));
   }, [search]);
 
+  const isSearchActive = matchedCategories !== null;
+
   useEffect(() => {
-    if (!searchMatchedCategory) return;
-    filterButtonRefs.current[searchMatchedCategory]?.scrollIntoView({
+    const firstMatch = matchedCategories?.[0];
+    if (!firstMatch) return;
+    filterButtonRefs.current[firstMatch]?.scrollIntoView({
       behavior: "smooth",
       inline: "center",
       block: "nearest",
     });
-  }, [searchMatchedCategory]);
+  }, [matchedCategories]);
 
   useEffect(() => {
     const handleScroll = () => setShowBackToTop(window.scrollY > 300);
@@ -79,10 +87,11 @@ export default function AllProductsPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const { products, isLoading, error } = useProducts({
-    search: search.trim() || undefined,
-    category: !search.trim() && activeFilter !== ALL_LABEL ? activeFilter : undefined,
-  });
+  const { products, isLoading, error } = useProducts(
+    isSearchActive
+      ? { categories: matchedCategories }
+      : { category: activeFilter !== ALL_LABEL ? activeFilter : undefined }
+  );
 
   const handleFilterClick = (category: string) => {
     // A drag that moved the strip shouldn't also register as picking
@@ -105,7 +114,7 @@ export default function AllProductsPage() {
             type="text"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="جستجو در محصولات..."
+            placeholder="جستجو در دسته‌بندی‌ها..."
             className="w-full rounded-lg border border-gray-200 px-4 py-2 focus:border-brand-400 focus:outline-none md:max-w-md"
           />
 
@@ -122,8 +131,9 @@ export default function AllProductsPage() {
               className="no-scrollbar flex cursor-grab gap-2 overflow-x-auto whitespace-nowrap active:cursor-grabbing sm:cursor-auto sm:flex-wrap sm:overflow-visible sm:whitespace-normal"
             >
               {categories.map((cat) => {
-                const isActive =
-                  (activeFilter === cat && !search) || cat === searchMatchedCategory;
+                const isActive = isSearchActive
+                  ? matchedCategories?.includes(cat)
+                  : activeFilter === cat;
                 return (
                   <button
                     key={cat}
@@ -153,7 +163,11 @@ export default function AllProductsPage() {
         {isLoading ? (
           <p className="py-10 text-center text-gray-400">در حال بارگذاری محصولات…</p>
         ) : products.length === 0 ? (
-          <p className="py-10 text-center text-gray-400">محصولی یافت نشد.</p>
+          <p className="py-10 text-center text-gray-400">
+            {isSearchActive && matchedCategories?.length === 0
+              ? "دسته‌بندی‌ای با این نام پیدا نشد."
+              : "محصولی یافت نشد."}
+          </p>
         ) : (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {products.map((product) => (

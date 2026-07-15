@@ -5,6 +5,8 @@ import type { Product } from "@/types/product";
 
 export interface UseProductsOptions {
   category?: string;
+  /** Multiple category labels/slugs at once — pass an empty array to force zero results (e.g. "search matched nothing"). */
+  categories?: string[];
   search?: string;
   minPrice?: number;
   maxPrice?: number;
@@ -47,6 +49,7 @@ export function useProducts(options: UseProductsOptions = {}): UseProductsResult
         const params = new URLSearchParams();
         const opts: UseProductsOptions = JSON.parse(key);
         if (opts.category) params.set("category", opts.category);
+        if (opts.categories !== undefined) params.set("categories", opts.categories.join(","));
         if (opts.search) params.set("search", opts.search);
         if (opts.minPrice !== undefined) params.set("minPrice", String(opts.minPrice));
         if (opts.maxPrice !== undefined) params.set("maxPrice", String(opts.maxPrice));

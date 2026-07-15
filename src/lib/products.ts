@@ -9,6 +9,8 @@ import { CATEGORY_LABEL_TO_SLUG } from "@/data/categories";
 export interface ProductQuery {
   /** Persian category label (e.g. "لنت ترمز") or a category slug. Omit/leave undefined for all categories. */
   category?: string;
+  /** Multiple category labels/slugs at once (union of all their products) — takes precedence over `category` when provided. */
+  categories?: string[];
   /** Free-text search across title and brand. */
   search?: string;
   minPrice?: number;
@@ -60,7 +62,13 @@ export async function getProducts(query: ProductQuery = {}): Promise<ProductDTO[
 
   const filter: Record<string, unknown> = {};
 
-  if (query.category && query.category !== "همه") {
+  if (query.categories !== undefined) {
+    // An explicitly empty array means "a category search was attempted
+    // but matched nothing" — `$in: []` correctly yields zero results
+    // rather than falling back to showing every category's products.
+    const slugs = query.categories.map((label) => CATEGORY_LABEL_TO_SLUG[label] ?? label);
+    filter.category = { $in: slugs };
+  } else if (query.category && query.category !== "همه") {
     // Accept either a Persian label or a raw slug so callers don't need
     // to know which form they have on hand.
     const slug = CATEGORY_LABEL_TO_SLUG[query.category] ?? query.category;
