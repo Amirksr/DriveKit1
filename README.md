@@ -2,26 +2,31 @@
 
 **A modern, RTL-first auto-parts e-commerce storefront**, rebuilt from the ground up with Next.js 14 (App Router), TypeScript, Tailwind CSS, Redux Toolkit, and MongoDB.
 
-This is a from-scratch rewrite of an earlier React + Vite prototype. The UI, feature set, and Persian-language catalogue are preserved, but the architecture, styling approach, data layer, and tooling have all been redesigned for production quality, type-safety, and testability.
+**یک فروشگاه آنلاین قطعات خودرو، مدرن و راست‌به‌چپ (RTL)**، که با Next.js 14 (App Router)، TypeScript، Tailwind CSS، Redux Toolkit و MongoDB از پایه بازنویسی شده است.
 
-> 🇮🇷 This is a demo/portfolio project. Product data, prices, and store details are illustrative.
+> 🇮🇷 Demo/portfolio project — product data, prices, and store details are illustrative.
+> این یک پروژه‌ی نمایشی/نمونه‌کار است — داده‌ها، قیمت‌ها و اطلاعات فروشگاه صرفاً جنبه‌ی نمایشی دارند.
 
----
-
-## ✨ Highlights
-
-- **Next.js 14 App Router** — server components for the initial catalogue render, client components only where interactivity is needed (filters, cart, wishlist).
-- **TypeScript throughout**, including `strict` mode and `noUncheckedIndexedAccess`, with a single shared `Product`/`CartItem` type vocabulary (`src/types`).
-- **Tailwind CSS** replaces Bootstrap/react-bootstrap entirely — no more mixing two styling systems.
-- **MongoDB + Mongoose** as the product catalogue's source of truth, with a typed data-access layer (`src/lib/products.ts`) and a `/api/products` route for client-side filtering.
-- **Redux Toolkit**, typed end-to-end (`RootState`/`AppDispatch` inferred from the store, pre-typed hooks) for the cart and wishlist.
-- **Deduplicated business logic** — price parsing/formatting, the category map, and product-card rendering used to be copy-pasted across 3–4 components in the original codebase; they're now single, tested modules.
-- **Automated tests** — 34 unit tests (Jest + React Testing Library) covering price math, Redux reducers, and component behavior, plus a MongoDB-backed integration test suite using `mongodb-memory-server`.
-- **CI-ready** — GitHub Actions workflow runs lint, type-check, unit tests, and a production build on every push/PR.
+**[English](#english) · [فارسی](#فارسی)**
 
 ---
+<a id="english"></a>
+## 🇬🇧 English
 
-## 🧱 Tech stack
+### ✨ Highlights
+
+- **Next.js 14 App Router** — server-rendered catalogue pages, client components only where real interactivity is needed (filters, cart, wishlist, OTP auth).
+- **TypeScript throughout**, `strict` mode + `noUncheckedIndexedAccess`, with a single shared `Product`/`CartItem` type vocabulary (`src/types`).
+- **Tailwind CSS** end to end — no Bootstrap, no mixed styling systems.
+- **MongoDB + Mongoose** as the catalogue's source of truth, with a typed data-access layer (`src/lib/products.ts`) and a `/api/products` route supporting category, multi-category, search, discount, stock, and price filters.
+- **Redux Toolkit**, typed end-to-end, for the cart and wishlist.
+- **OTP-based login/signup** (`/login`) — a single phone/email flow that unifies sign-in and sign-up, with a 6-digit code input, resend cooldown, and a blurred hero-image backdrop. Authentication itself is mocked (see `src/lib/mockAuth.ts`) — swap in a real provider before production.
+- **Content pages**: About (`/about`), Contact (`/contact`, with a working form and embedded map), Track Order (`/track-order`, animated status timeline), and a Blog (`/blog` + `/blog/[slug]`) with sample posts.
+- **Product cards** with fixed-height sections so cards always align in a grid regardless of title length or whether a product is discounted; titles that overflow expand on hover without shifting layout.
+- **Automated tests** — unit tests (Jest + React Testing Library) for price math, Redux reducers, and component behavior, plus a MongoDB-backed integration suite using `mongodb-memory-server`.
+- **CI-ready** — GitHub Actions runs lint, type-check, unit tests, and a production build on every push/PR.
+
+### 🧱 Tech stack
 
 | Layer | Choice |
 |---|---|
@@ -35,122 +40,194 @@ This is a from-scratch rewrite of an earlier React + Vite prototype. The UI, fea
 | Testing | Jest, React Testing Library, mongodb-memory-server |
 | CI | GitHub Actions |
 
----
-
-## 📂 Project structure
+### 📂 Project structure
 
 ```
 src/
-├── app/                    # Next.js App Router routes
-│   ├── page.tsx            # Home
-│   ├── all-products/       # Search + category grid
-│   ├── products/list/      # Category page with advanced filters
-│   ├── cart/                # Shopping cart
-│   └── api/products/        # REST endpoint backed by MongoDB
+├── app/
+│   ├── page.tsx                # Home
+│   ├── all-products/           # Category-name search + full catalogue grid
+│   ├── products/list/          # Category page with advanced filters
+│   ├── cart/                   # Shopping cart
+│   ├── login/                  # OTP login/signup
+│   ├── about/                  # About page
+│   ├── contact/                # Contact page (form + map)
+│   ├── track-order/            # Order tracking demo
+│   ├── blog/ + blog/[slug]/    # Blog listing + post detail
+│   └── api/products/           # REST endpoint backed by MongoDB
 ├── components/
-│   ├── layout/              # Header, Footer
-│   ├── home/                 # Hero, banners, carousels, etc.
-│   ├── product/              # Shared <ProductCard />
-│   └── providers/            # Redux <Provider> wrapper
-├── redux/                   # store, typed hooks, cart & wishlist slices
-├── lib/                     # price.ts, products.ts, mongodb.ts, hooks
-├── models/                  # Mongoose schemas
-├── data/                    # Static reference data (categories, brands…)
-└── types/                   # Shared TypeScript types
+│   ├── layout/                 # Header (mega-menu, mobile drawer, search), Footer
+│   ├── home/                   # Hero, banners, carousels
+│   ├── product/                # Shared <ProductCard />
+│   ├── auth/                   # OTP input
+│   └── providers/               # Redux <Provider> wrapper
+├── redux/                      # store, typed hooks, cart & wishlist slices
+├── lib/                        # price.ts, products.ts, mongodb.ts, mockAuth.ts, hooks
+├── models/                     # Mongoose schemas
+├── data/                       # Static reference data (categories, brands, blog posts…)
+└── types/                      # Shared TypeScript types
 scripts/
-└── seed.ts                  # Imports the original JSON catalogue into MongoDB
+└── seed.ts                     # Imports the JSON catalogue into MongoDB
 __tests__/
-├── lib/, redux/, components/ # Fast unit tests (no external services)
-└── integration/              # MongoDB-backed tests (mongodb-memory-server)
+├── lib/, redux/, components/   # Fast unit tests (no external services)
+└── integration/                # MongoDB-backed tests (mongodb-memory-server)
 ```
 
----
+### 🚀 Getting started
 
-## 🚀 Getting started
-
-### 1. Install dependencies
-
+**1. Install dependencies**
 ```bash
 npm install
 ```
 
-### 2. Configure MongoDB
-
-Copy the example environment file and point it at a MongoDB instance:
-
+**2. Configure MongoDB**
 ```bash
 cp .env.example .env.local
 ```
-
-Any of these work for local development:
-
+Then point `MONGODB_URI` at either:
 - **Docker**: `docker run -d -p 27017:27017 --name drivekit-mongo mongo:7`
-- **MongoDB Atlas** (free tier): create a cluster at https://www.mongodb.com/atlas and paste the connection string into `MONGODB_URI`.
+- **MongoDB Atlas** (free tier): create a cluster at https://www.mongodb.com/atlas.
 
-### 3. Seed the catalogue
-
-The original product photos and metadata (`public/assets/products-list/**/data.json`) are imported into MongoDB with:
-
+**3. Seed the catalogue**
 ```bash
 npm run seed
 ```
+Idempotent — safe to re-run any time the JSON catalogue changes.
 
-This is idempotent — safe to re-run any time the JSON catalogue changes.
-
-### 4. Run the dev server
-
+**4. Run the dev server**
 ```bash
 npm run dev
 ```
-
 Visit http://localhost:3000.
 
----
+### 🔐 Trying the OTP login
 
-## 🧪 Testing
+Go to `/login`, enter any valid-looking phone number or email, request a code, then enter **`123456`** — the one fixed "correct" code in the mock auth layer.
+
+### 🧪 Testing
 
 ```bash
-npm test                 # fast unit tests (price math, Redux, components)
-npm run test:coverage    # same, with a coverage report
+npm test                 # fast unit tests
+npm run test:coverage    # same, with coverage
 npm run test:integration # MongoDB-backed tests via mongodb-memory-server
 npm run type-check       # tsc --noEmit
-npm run lint             # ESLint (next/core-web-vitals)
+npm run lint             # ESLint
 ```
 
-The integration suite is kept separate from `npm test` because
-`mongodb-memory-server` downloads a `mongod` binary on first run — it's not
-meant to slow down the everyday test loop, but it's there to prove the
-MongoDB data layer (filtering, search, discount math, category mapping)
-actually works against a real database engine.
+### ☁️ Deploying
 
----
+1. Push to GitHub.
+2. Import the repo in [Vercel](https://vercel.com).
+3. Add `MONGODB_URI` (and optionally `MONGODB_DB`) as environment variables.
+4. Run `npm run seed` once, pointed at your production database.
 
-## ☁️ Deploying
+### 📝 Notable design decisions
 
-The app deploys to [Vercel](https://vercel.com) like any Next.js project:
+- **MongoDB instead of static JSON**: a single indexed query per page instead of fetching ~40 separate JSON files client-side, plus server-side filtering/search and room for an admin panel or checkout flow later.
+- **One `ProductCard`**: discount styling, wishlist state, and the expandable-title behavior only need to be correct in one place, used by every grid and carousel on the site.
+- **Tailwind over Bootstrap**: one styling system instead of two, with responsive behavior (mobile drawer vs. desktop mega-menu) handled declaratively.
+- **Mock OTP auth**: demonstrates the full UX (request code → verify → success) without a real backend; `src/lib/mockAuth.ts` is the single place to wire up a real provider.
 
-1. Push this repo to GitHub.
-2. Import it in Vercel.
-3. Add the `MONGODB_URI` (and optionally `MONGODB_DB`) environment variable in the Vercel project settings — a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster works well here.
-4. Run `npm run seed` locally once, pointed at your Atlas cluster, to populate production data.
-
----
-
-## 📝 Notable design decisions
-
-- **Why MongoDB instead of the static JSON files?** The original prototype fetched ~40 separate `data.json` files on the client for every page load. Moving that into MongoDB means: a single indexed query per page, server-side filtering/search, and a foundation for an admin panel or checkout flow later — without changing the shape of the data the UI already expects.
-- **Why a single `ProductCard`?** The original had near-duplicate `ProductCard` and `OfferCard` components. They're merged into one, parameterized by the `product` prop, so discount styling and wishlist behavior only need to be right in one place.
-- **Why Tailwind over Bootstrap?** The original mixed `react-bootstrap` with hand-written CSS files per component. Tailwind's utility classes collapse that into one system and make responsive behavior (mobile drawer vs. desktop mega-menu, swiper vs. grid) declarative instead of `window.innerWidth` listeners.
-
----
-
-## 📄 License
+### 📄 License
 
 MIT — see [LICENSE](./LICENSE).
 
----
-
-## 👤 Author
+### 👤 Author
 
 **Amir Kasraeian** — Frontend Developer (React / Next.js)
 [GitHub](https://github.com/Amirksr) · [LinkedIn](https://linkedin.com/in/amir-kasraeian) · [Portfolio](https://amirkasraeian.vercel.app)
+
+---
+<a id="فارسی"></a>
+## 🇮🇷 فارسی
+
+### ✨ ویژگی‌های کلیدی
+
+- **Next.js 14 (App Router)** — صفحات کاتالوگ سمت سرور رندر می‌شوند و کامپوننت‌های کلاینت فقط جایی استفاده شده‌اند که واقعاً تعامل لازم است (فیلترها، سبد خرید، علاقه‌مندی‌ها، احراز هویت با کد یکبار مصرف).
+- **TypeScript در سراسر پروژه**، با حالت `strict` و `noUncheckedIndexedAccess`، و یک واژگان تایپی مشترک برای `Product`/`CartItem` (در `src/types`).
+- **Tailwind CSS** به‌طور کامل — بدون Bootstrap و بدون قاطی شدن دو سیستم استایل‌دهی.
+- **MongoDB + Mongoose** به‌عنوان منبع اصلی داده‌ی کاتالوگ، همراه با یک لایه‌ی دسترسی به داده‌ی تایپ‌شده (`src/lib/products.ts`) و یک روت `/api/products` که فیلتر بر اساس دسته‌بندی، چند دسته‌بندی هم‌زمان، جستجو، تخفیف، موجودی و بازه‌ی قیمت را پشتیبانی می‌کند.
+- **Redux Toolkit** با تایپ کامل، برای سبد خرید و علاقه‌مندی‌ها.
+- **ورود/ثبت‌نام با رمز یکبار مصرف (OTP)** در مسیر `/login` — یک فرآیند واحد برای هم ورود و هم ثبت‌نام با شماره موبایل یا ایمیل، همراه با ورودی کد ۶ رقمی، تایمر ارسال مجدد، و پس‌زمینه‌ی محو از تصویر هیرو. خودِ احراز هویت شبیه‌سازی‌شده است (`src/lib/mockAuth.ts`) — پیش از انتشار واقعی باید با یک سرویس واقعی جایگزین شود.
+- **صفحات محتوایی**: درباره ما (`/about`)، تماس با ما (`/contact`، همراه با فرم کارکردی و نقشه‌ی جاسازی‌شده)، پیگیری سفارش (`/track-order`، با تایم‌لاین وضعیت انیمیشنی)، و بلاگ (`/blog` و `/blog/[slug]`) با چند مقاله‌ی نمونه.
+- **کارت‌های محصول** با بخش‌های ارتفاع‌ثابت، به‌گونه‌ای که کارت‌ها همیشه در یک ردیف هم‌تراز می‌مانند — چه عنوان طولانی باشد چه محصول تخفیف نداشته باشد؛ عنوان‌های طولانی با هاور باز می‌شوند بدون اینکه چیدمان صفحه به‌هم بریزد.
+- **تست‌های خودکار** — تست‌های واحد (Jest + React Testing Library) برای محاسبات قیمت، ریدیوسرهای Redux و رفتار کامپوننت‌ها، به‌علاوه یک مجموعه تست یکپارچگی متصل به MongoDB با استفاده از `mongodb-memory-server`.
+- **آماده برای CI** — گردش‌کار GitHub Actions در هر push/PR، لینت، بررسی تایپ، تست‌های واحد و build نهایی را اجرا می‌کند.
+
+### 🧱 پشته‌ی فنی
+
+| لایه | انتخاب |
+|---|---|
+| فریم‌ورک | Next.js 14 (App Router) |
+| زبان | TypeScript (حالت strict) |
+| استایل‌دهی | Tailwind CSS |
+| مدیریت وضعیت | Redux Toolkit + React-Redux |
+| پایگاه‌داده | MongoDB (از طریق Mongoose) |
+| انیمیشن | Framer Motion |
+| کاروسل | Swiper |
+| تست | Jest، React Testing Library، mongodb-memory-server |
+| یکپارچه‌سازی مداوم | GitHub Actions |
+
+### 🚀 راه‌اندازی پروژه
+
+**۱. نصب پکیج‌ها**
+```bash
+npm install
+```
+
+**۲. تنظیم MongoDB**
+```bash
+cp .env.example .env.local
+```
+سپس `MONGODB_URI` را به یکی از این‌ها وصل کنید:
+- **Docker**: `docker run -d -p 27017:27017 --name drivekit-mongo mongo:7`
+- **MongoDB Atlas** (نسخه‌ی رایگان): یک کلاستر در https://www.mongodb.com/atlas بسازید.
+
+**۳. وارد کردن داده‌ی کاتالوگ**
+```bash
+npm run seed
+```
+این اسکریپت idempotent است — اجرای مجددش هر زمان که فایل‌های JSON عوض شوند، بی‌خطر است.
+
+**۴. اجرای سرور توسعه**
+```bash
+npm run dev
+```
+سپس آدرس http://localhost:3000 را باز کنید.
+
+### 🔐 تست ورود با کد یکبار مصرف
+
+به مسیر `/login` بروید، یک شماره موبایل یا ایمیل معتبر وارد کنید، درخواست کد بدهید، و سپس **`123456`** را وارد کنید — تنها کد «درست» ثابت در لایه‌ی احراز هویت شبیه‌سازی‌شده.
+
+### 🧪 تست‌ها
+
+```bash
+npm test                 # تست‌های واحد سریع
+npm run test:coverage    # همان، همراه با گزارش پوشش
+npm run test:integration # تست‌های متصل به MongoDB با mongodb-memory-server
+npm run type-check       # tsc --noEmit
+npm run lint             # ESLint
+```
+
+### ☁️ استقرار (Deploy)
+
+۱. ریپو را به گیت‌هاب پوش کنید.
+۲. آن را در [Vercel](https://vercel.com) ایمپورت کنید.
+۳. متغیرهای محیطی `MONGODB_URI` (و در صورت نیاز `MONGODB_DB`) را اضافه کنید.
+۴. یک بار `npm run seed` را با اتصال به دیتابیس نهایی اجرا کنید.
+
+### 📝 برخی تصمیمات طراحی
+
+- **چرا MongoDB به‌جای فایل‌های JSON ثابت؟** به‌جای واکشی حدود ۴۰ فایل JSON جداگانه در سمت کلاینت، هر صفحه فقط یک کوئری ایندکس‌شده می‌زند؛ همچنین فیلتر/جستجوی سمت سرور و زمینه‌ای برای پنل مدیریت یا فرایند تسویه حساب در آینده فراهم می‌شود.
+- **چرا یک `ProductCard` واحد؟** استایل تخفیف، وضعیت علاقه‌مندی، و رفتار باز شدن عنوان فقط باید در یک‌جا درست باشند و همه‌جای سایت (گریدها و کاروسل‌ها) از همان استفاده می‌کنند.
+- **چرا Tailwind به‌جای Bootstrap؟** یک سیستم استایل‌دهی به‌جای دوتا، با رفتار واکنش‌گرا (منوی کشویی موبایل در برابر مگامنوی دسکتاپ) به‌صورت اعلانی.
+- **احراز هویت OTP شبیه‌سازی‌شده:** کل تجربه‌ی کاربری (درخواست کد → تایید → موفقیت) را بدون نیاز به بک‌اند واقعی نشان می‌دهد؛ فایل `src/lib/mockAuth.ts` تنها جایی است که باید برای اتصال به یک سرویس واقعی تغییر کند.
+
+### 📄 لایسنس
+
+MIT — به فایل [LICENSE](./LICENSE) مراجعه کنید.
+
+### 👤 نویسنده
+
+**امیر کسرائیان** — توسعه‌دهنده فرانت‌اند (React / Next.js)
+[گیت‌هاب](https://github.com/Amirksr) · [لینکدین](https://linkedin.com/in/amir-kasraeian) · [نمونه‌کار](https://amirkasraeian.vercel.app)
