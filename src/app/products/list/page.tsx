@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { FaChevronDown, FaChevronUp, FaFilter } from "react-icons/fa";
 
@@ -41,6 +41,29 @@ function ProductListContent() {
 
   const addToCart = useAddToCart();
 
+  const resetFilters = () => {
+    setMinPrice("");
+    setMaxPrice("");
+    setSelectedCar("");
+    setSelectedBrand("");
+    setDiscountOnly(false);
+    setInStockOnly(false);
+    setCarDropdownOpen(false);
+    setBrandDropdownOpen(false);
+  };
+
+  // Bug fix: the advanced filters (price range, car, brand, discount,
+  // in-stock) used to be plain local state that persisted across
+  // category changes. Since navigating to a different sub-category keeps
+  // this same page component mounted (only the `category` search param
+  // changes), those stale filter values were silently carrying over and
+  // being applied to the new category's products. Resetting them
+  // whenever `category` changes keeps each category's filters isolated.
+  useEffect(() => {
+    resetFilters();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category]);
+
   const { products, isLoading } = useProducts({
     category: category === "همه محصولات" ? undefined : category,
   });
@@ -60,17 +83,6 @@ function ProductListContent() {
       return true;
     });
   }, [products, minPrice, maxPrice, selectedCar, selectedBrand, discountOnly, inStockOnly]);
-
-  const resetFilters = () => {
-    setMinPrice("");
-    setMaxPrice("");
-    setSelectedCar("");
-    setSelectedBrand("");
-    setDiscountOnly(false);
-    setInStockOnly(false);
-    setCarDropdownOpen(false);
-    setBrandDropdownOpen(false);
-  };
 
   const filters = (
     <div className="rounded-xl border border-gray-100 p-4">
